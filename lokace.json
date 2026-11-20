@@ -15,7 +15,8 @@
     "zdroje": "pole {nazev, url}",
     "poznamka": "nejistoty a rozpory mezi zdroji (citace v uvozovkách z originálu)",
     "kontrola": "null, nebo text upozornění z automatické kontroly",
-    "zakladna_ci5": "true, pokud se podle zdroje na místě točilo sídlo CI5 (HQ, kanceláře, operační či počítačová místnost, budova CI5); chybí u ostatních"
+    "zakladna_ci5": "true, pokud se podle zdroje na místě točilo sídlo CI5 (HQ, kanceláře, operační či počítačová místnost, budova CI5); chybí u ostatních",
+    "pruvodce": "jen u míst vybraných pro návštěvu Londýna: {oblast, proc} – čtvrť pro plánování dne a jedna věta, proč místo stojí za zastávku (jen podle dat)"
   },
   "lokace": [
     {
@@ -187,7 +188,11 @@
       ],
       "poznamka": "Hlavní základna natáčení 1. série. Zdroj neuvádí adresu.",
       "kontrola": null,
-      "zakladna_ci5": true
+      "zakladna_ci5": true,
+      "pruvodce": {
+        "oblast": "Výlety za Londýn",
+        "proc": "Sídlo CI5 v 1. sérii – všech 13 dílů."
+      }
     },
     {
       "id": "L-003",
@@ -3157,7 +3162,11 @@
         }
       ],
       "poznamka": "Záběry jelenů jsou archivní. Zdroj uvádí obec u S01E08 jako Iver, u 3. série jako Fulmer. Moviemaps (podle IMDb) uvádí výměnu špionů v S03E04 – shoduje se s mark-1. Black Park Cottage (Queen's Drive, Fulmer) z S04E11 je zařazen sem.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Výlety za Londýn",
+        "proc": "8 dílů – lesní scény napříč sériemi, výměna špionů v Dead Reckoning; ověřeno dvěma zdroji."
+      }
     },
     {
       "id": "L-093",
@@ -4274,7 +4283,11 @@
         }
       ],
       "poznamka": "Wikipedie uvádí, že Doyle v Hunter/Hunted bydlí na Cliff Road v Camdenu; mark-1 uvádí Cliff Road Studios.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Camden a Swiss Cottage",
+        "proc": "Doylův byt (Hunter/Hunted, The Rack) – ověřeno dvěma zdroji."
+      }
     },
     {
       "id": "L-127",
@@ -4964,7 +4977,11 @@
       ],
       "poznamka": "Matherova kancelář u S02E02 jen „perhaps“.",
       "kontrola": null,
-      "zakladna_ci5": true
+      "zakladna_ci5": true,
+      "pruvodce": {
+        "oblast": "Hammersmith a Shepherd's Bush",
+        "proc": "Sídlo CI5 ve 3.–5. sérii, 19 dílů. Areál zbořen 1983, Block A na Brook Green podle zdroje přežil."
+      }
     },
     {
       "id": "L-143",
@@ -5337,7 +5354,11 @@
         }
       ],
       "poznamka": "Únos se točil ve dvou dnech (silnice střídavě suchá a mokrá). V dialogu zazní „Jubilee Walk“, zdroj uvádí Jubilee Gardens.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Únos v First Night, ranní občerstvení pod Hungerford Bridge v Black Out."
+      }
     },
     {
       "id": "L-154",
@@ -5692,7 +5713,11 @@
         }
       ],
       "poznamka": "U S02E05 zdroj upozorňuje na podvod: Cowley jde zdánlivě na východ, další záběr je ale jižně.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Ministrova kancelář a Cowleyho šermování, 5 dílů."
+      }
     },
     {
       "id": "L-165",
@@ -5920,7 +5945,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Hammersmith a Shepherd's Bush",
+        "proc": "Hned u Cadby Hall, 5 dílů – Cowleyho cesty ke zbrojnici, vycházkový dvůr CI5, honičky."
+      }
     },
     {
       "id": "L-171",
@@ -7003,7 +7032,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Úvod Rogue, úschovna zavazadel ve Spy Probe."
+      }
     },
     {
       "id": "L-204",
@@ -7099,7 +7132,11 @@
         }
       ],
       "poznamka": "Na Street View nedostupné. Kde se odehrává potyčka s Boltem, zdroj neuvádí.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Kensington a North Kensington",
+        "proc": "Cowleyho byt v Backtrack, Boltův domov v Rogue. Na Street View není vidět."
+      }
     },
     {
       "id": "L-207",
@@ -7157,7 +7194,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Hammersmith a Shepherd's Bush",
+        "proc": "Hospoda, kam Maggie bere kluky v Rogue."
+      }
     },
     {
       "id": "L-209",
@@ -7224,7 +7265,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Jídlo s sebou v Rogue; podle zdroje možná jediný podnik, který tu je přes 40 let."
+      }
     },
     {
       "id": "L-211",
@@ -7913,7 +7958,11 @@
       ],
       "poznamka": null,
       "kontrola": null,
-      "zakladna_ci5": true
+      "zakladna_ci5": true,
+      "pruvodce": {
+        "oblast": "Výlety za Londýn",
+        "proc": "7 dílů – masakr v Eccleston Manor (Backtrack), Radoukův dům (Stopover), hotel Crableigh, výcvik a CI5 HQ ve Wild Justice."
+      }
     },
     {
       "id": "L-231",
@@ -8065,7 +8114,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Kensington a North Kensington",
+        "proc": "Mickeyho byt v The Madness of Mickey Hamilton, celkem 3 díly; stojí."
+      }
     },
     {
       "id": "L-235",
@@ -8700,7 +8753,11 @@
         }
       ],
       "poznamka": "Zdroj píše „Landsdowne“; exteriér je natočen těsně, ale podle zdroje to sedí.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Kensington a North Kensington",
+        "proc": "Bodieho byt; nastražený telefon v The Purging of CI5."
+      }
     },
     {
       "id": "L-255",
@@ -10376,7 +10433,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Camden a Swiss Cottage",
+        "proc": "3 díly, stojí (dnes Marriott)."
+      }
     },
     {
       "id": "L-305",
@@ -10568,7 +10629,11 @@
         }
       ],
       "poznamka": "„Documented as“.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Camden a Swiss Cottage",
+        "proc": "Bodieho dům (The Untouchables), Morganův byt (Runner)."
+      }
     },
     {
       "id": "L-311",
@@ -10702,7 +10767,11 @@
         }
       ],
       "poznamka": "Podvod: akce se sem přesouvá z činžáku The Highlands.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "Honička po střechách (Runner), Anitin byt (Blood Sports); stojí."
+      }
     },
     {
       "id": "L-315",
@@ -10767,7 +10836,11 @@
         }
       ],
       "poznamka": "Sázková kancelář jen „documented as“.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "5 dílů – sázková kancelář (Runner), obchod Ngan Hunga (Take Away); stojí."
+      }
     },
     {
       "id": "L-316",
@@ -11095,7 +11168,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "Kluci běhají mezi hroby v Servant of Two Masters."
+      }
     },
     {
       "id": "L-327",
@@ -12579,7 +12656,11 @@
         }
       ],
       "poznamka": "Natáčení přesunuto na jinou noc; štáb byl už v Hammersmithu, bylo to pohodlnější než Frithville Gardens.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Hammersmith a Shepherd's Bush",
+        "proc": "Exteriér Doylova bytu v Involvement."
+      }
     },
     {
       "id": "L-373",
@@ -14427,7 +14508,11 @@
         }
       ],
       "poznamka": "Interiér auta jen „documented as“.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Camden a Swiss Cottage",
+        "proc": "Doylovo Capri smykem a honička za taxíkem v Blood Sports; sázková kancelář William Hill stojí."
+      }
     },
     {
       "id": "L-433",
@@ -14842,7 +14927,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "Inger najde Paula v The Gun; kavárna tam podle zdroje pořád je."
+      }
     },
     {
       "id": "L-447",
@@ -16013,7 +16102,11 @@
         }
       ],
       "poznamka": "Zdroj jednou píše „Liverpool Street“, jinde Liverpool Road.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "Sledování a důkazy v Kickback, schůzka Rahada s Bodiem v The Untouchables; dnes Business Design Centre."
+      }
     },
     {
       "id": "L-485",
@@ -16100,7 +16193,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "Kolem hospody projíždí Richardsonova limuzína v Kickback."
+      }
     },
     {
       "id": "L-488",
@@ -16361,7 +16458,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Kluci vyslýchají fotografy v It's Only a Beautiful Picture."
+      }
     },
     {
       "id": "L-497",
@@ -16475,7 +16576,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Islington, Crouch End a Highgate",
+        "proc": "„Ministerstvo“ ve 4 dílech."
+      }
     },
     {
       "id": "L-500",
@@ -17711,7 +17816,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Cowley a Doyle před katedrálou v You'll Be All Right."
+      }
     },
     {
       "id": "L-542",
@@ -18048,7 +18157,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Westminster a centrum",
+        "proc": "Lawsonovo ultimátum (Lawson's Last Stand), ministr s Dawsonem (Spy Probe)."
+      }
     },
     {
       "id": "L-553",
@@ -18077,7 +18190,11 @@
         }
       ],
       "poznamka": "Výhled zakrývá nová zástavba; zdroj ukazuje záběr ze strany elektrárny. Fanoušek Les Martin uvádí, že se tu točilo celý den.",
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Jih a západ",
+        "proc": "Finále Lawson's Last Stand."
+      }
     },
     {
       "id": "L-554",
@@ -18211,7 +18328,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Kensington a North Kensington",
+        "proc": "Doyle přijíždí domů (Discovered in a Graveyard), Ahmedův byt (The Untouchables)."
+      }
     },
     {
       "id": "L-558",
@@ -18336,7 +18457,11 @@
         }
       ],
       "poznamka": null,
-      "kontrola": null
+      "kontrola": null,
+      "pruvodce": {
+        "oblast": "Jih a západ",
+        "proc": "Doylův sen v Discovered in a Graveyard."
+      }
     },
     {
       "id": "L-562",
