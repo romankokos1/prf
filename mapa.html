@@ -202,7 +202,12 @@ select:focus{outline:1px solid var(--amb);outline-offset:-1px}
       markers[l.id].setZIndexOffset(inFilter(l) ? 500 : 0);
     });
     document.getElementById('count').innerHTML = `<b>${vis.length}</b> / ${lok.length}`;
-    if (fit && vis.length) map.fitBounds(L.latLngBounds(vis.map(l => [l.lat, l.lng])), {padding:[40,40], maxZoom:15});
+    if (fit && vis.length) {
+      // rámovat Londýn a okolí; vzdálená místa (Dover) zůstávají na mapě, ale neoddalují ji
+      const core = vis.filter(l => map.distance([l.lat, l.lng], [51.51, -0.30]) < 50000);
+      const pts = (core.length ? core : vis).map(l => [l.lat, l.lng]);
+      map.fitBounds(L.latLngBounds(pts), {padding:[40,40], maxZoom:15});
+    }
     if (!current) list(vis);
   }
 
