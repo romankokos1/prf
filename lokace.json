@@ -1,0 +1,3929 @@
+{
+  "schema": {
+    "id": "L-001… stabilní kód místa, nikdy se nemění",
+    "epizody": "pole kódů z epizody.json (pro filtr)",
+    "sceny": "pole {epizoda, popis} – co se na místě v daném dílu točilo",
+    "nazev": "název místa",
+    "adresa": "ulice / číslo, jen pokud ji uvádí zdroj, jinak null",
+    "obec": "obec/čtvrť – vyplněno vždy",
+    "lat": "WGS84",
+    "lng": "WGS84",
+    "souradnice": "zdroj (převzato ze zdroje) | ulice (střed nejbližšího úseku ulice podle OS Open Names – ne konkrétní dům) | odhad (ruční odhad, k ověření) | ověřeno",
+    "jistota": "ověřeno (≥2 nezávislé zdroje se shodují) | pravděpodobné (1 zdroj s konkrétním místem) | oblast (zdroj uvádí jen obec / nepřesně)",
+    "stav_dnes": "stojí | přestavěno | zbořeno | chátrá | neznámo",
+    "stav_poznamka": "co tam je dnes – jen podle zdroje",
+    "zdroje": "pole {nazev, url}",
+    "poznamka": "nejistoty a rozpory mezi zdroji (citace v uvozovkách z originálu)",
+    "kontrola": "null, nebo text upozornění z automatické kontroly"
+  },
+  "lokace": [
+    {
+      "id": "L-001",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Bezpečnostní konference s dr. Harbingerem a šejkem Achmeiou – interiéry i exteriéry, později scéna s poštovním vozem"
+        }
+      ],
+      "nazev": "Stoke Park Club",
+      "adresa": null,
+      "obec": "Stoke Poges, Buckinghamshire",
+      "lat": 51.53443,
+      "lng": -0.60276,
+      "souradnice": "zdroj",
+      "jistota": "ověřeno",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        },
+        {
+          "nazev": "moviemaps.org",
+          "url": "https://moviemaps.org/locations/2t"
+        }
+      ],
+      "poznamka": "Moviemaps přebírá údaj z IMDb, mark-1 ho potvrzuje nezávisle. Souřadnice z odkazu na moviemaps (stránka je výslovně jako polohu místa neoznačuje).",
+      "kontrola": null
+    },
+    {
+      "id": "L-002",
+      "epizody": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "CI5 HQ, Suttonův dům, interiéry Nesbittova domu, střelba do plechovek"
+        },
+        {
+          "epizoda": "S01E02",
+          "popis": "CI5 HQ, Doylův nový byt, telefonní budka, dům sira Charlese, Join byt, interiér Culverova bytu"
+        },
+        {
+          "epizoda": "S01E03",
+          "popis": "Návštěvní místnost věznice (ve skutečnosti squashový kurt), CI5 HQ, Turkelův sklep, Bodieho byt"
+        },
+        {
+          "epizoda": "S01E04",
+          "popis": "CI5 HQ, záběry „Wimbledonu“ mimo archivní materiál"
+        },
+        {
+          "epizoda": "S01E05",
+          "popis": "CI5 HQ, nemocnice Tin-Cana"
+        },
+        {
+          "epizoda": "S01E06",
+          "popis": "CI5 HQ, Cusackův sklad zbraní, hotelový pokoj gangu"
+        },
+        {
+          "epizoda": "S01E07",
+          "popis": "CI5 HQ, odjezd Cowleyho a Doyla"
+        },
+        {
+          "epizoda": "S01E08",
+          "popis": "Star Hotel (interiér i exteriér), CI5 HQ, policejní archiv"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "CI5 HQ, Doylův byt, interiér Ambury Mansions, flashbacky 1971 (policie, soud, věznice)"
+        },
+        {
+          "epizoda": "S01E10",
+          "popis": "CI5 HQ, nemocniční pokoj, Hunterova kancelář, Blackieho dům"
+        },
+        {
+          "epizoda": "S01E11",
+          "popis": "Kanceláře CI5, Ramosovo místo, tělocvična, letištní salonek"
+        },
+        {
+          "epizoda": "S01E12",
+          "popis": "CI5 HQ, nemocnice, interiér základny Johna Howarda"
+        },
+        {
+          "epizoda": "S01E13",
+          "popis": "CI5 HQ, Doyle a Jax při běhu, dům Zadieho společníka"
+        }
+      ],
+      "nazev": "Harefield Grove",
+      "adresa": null,
+      "obec": "Harefield",
+      "lat": 51.6105,
+      "lng": -0.487,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E10",
+          "url": "http://www.mark-1.co.uk/Professionals/a10.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": "Hlavní základna natáčení 1. série. Zdroj neuvádí adresu.",
+      "kontrola": null
+    },
+    {
+      "id": "L-003",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Nádrž, kolem které se točí celý díl; Nesbittův příjezd v úvodu"
+        }
+      ],
+      "nazev": "Thorpe Park Ski Lakes (nádrž)",
+      "adresa": null,
+      "obec": "Thorpe, Surrey",
+      "lat": 51.404,
+      "lng": -0.513,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": "Kde Nesbitt testoval rozbušku, zdroj neví („pravděpodobně blízko nádrže“).",
+      "kontrola": null
+    },
+    {
+      "id": "L-004",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "World Chemical Products (hlavní cíl) a následné nemocniční scény"
+        }
+      ],
+      "nazev": "Costain House",
+      "adresa": "Nicholson's Walk",
+      "obec": "Maidenhead",
+      "lat": 51.5225,
+      "lng": -0.7205,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": "Zdroj si není jistý konkrétní budovou („might be the building in the centre of this aerial shot“).",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-005",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Kluci navštíví byt Susan Fentonové"
+        }
+      ],
+      "nazev": "Victoria Road",
+      "adresa": "Victoria Road",
+      "obec": "Chesham",
+      "lat": 51.70887,
+      "lng": -0.60888,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-006",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Krátký záběr Erica Suttona, jak odchází od Susanina bytu (podvod, byt je v Cheshamu)"
+        }
+      ],
+      "nazev": "The Farmlands",
+      "adresa": "The Farmlands",
+      "obec": "Northolt",
+      "lat": 51.54807,
+      "lng": -0.37045,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-007",
+      "epizody": [
+        "S01E01",
+        "S01E02",
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Malý klub, kde se Doyle schází s Bennym"
+        },
+        {
+          "epizoda": "S01E02",
+          "popis": "Kluci tu najdou prostitutku Paulu"
+        },
+        {
+          "epizoda": "S01E05",
+          "popis": "Doyle vyslýchá pana Huntleyho v kulečníkovém klubu"
+        }
+      ],
+      "nazev": "Klub 1812 / Gatsby's",
+      "adresa": "Station Road",
+      "obec": "Chesham",
+      "lat": 51.70562,
+      "lng": -0.61177,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Klub už neexistuje.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "Rozpor v adrese: u S01E01 zdroj uvádí High Street v Cheshamu, u S01E02 a S01E05 Station Road. U S01E05 jen „documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-008",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Hospoda The Black Bull, na kterou Nesbitt zaútočí"
+        }
+      ],
+      "nazev": "The Red Cow (jako The Black Bull)",
+      "adresa": null,
+      "obec": "Slough",
+      "lat": 51.5095,
+      "lng": -0.595,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": "Zdroj uvádí jen název hospody a město, souřadnice ukazují střed Slough.",
+      "kontrola": null
+    },
+    {
+      "id": "L-009",
+      "epizody": [
+        "S01E01",
+        "S01E05",
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Doyle přejíždí most; později Doyle a Cowley spěchají k Nesbittovi kolem Horse and Barge"
+        },
+        {
+          "epizoda": "S01E05",
+          "popis": "Kluci spěchají za svědkem Ralphem Mayem, projíždějí kolem hospody"
+        },
+        {
+          "epizoda": "S01E07",
+          "popis": "Cowley a Doyle se přidávají k pátrání po Bodiem"
+        }
+      ],
+      "nazev": "Moorhall Road (most, hospoda Horse and Barge)",
+      "adresa": "Moorhall Road",
+      "obec": "Harefield",
+      "lat": 51.58808,
+      "lng": -0.48395,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": "Dům za mostem je dnes zarostlý stromy.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "U prvního záběru S01E01 zdroj píše Moorhall Lane, jinde Moorhall Road.",
+      "kontrola": null
+    },
+    {
+      "id": "L-010",
+      "epizody": [
+        "S01E01",
+        "S01E03",
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Doyle objíždí kruháč cestou za Bennym"
+        },
+        {
+          "epizoda": "S01E03",
+          "popis": "Další policejní vůz se přidává k obléhání (záběr točený pro S01E06)"
+        },
+        {
+          "epizoda": "S01E06",
+          "popis": "Gang jede k bance; policejní Triumph přejíždí kruháč z Merton Road do Alpha Street North"
+        }
+      ],
+      "nazev": "Kruhový objezd St Laurence Way",
+      "adresa": "St Laurence Way",
+      "obec": "Slough",
+      "lat": 51.5046,
+      "lng": -0.58877,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Okolí se od té doby k nepoznání změnilo.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-011",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Konec Austinu Allegro během masakru v hospodě"
+        }
+      ],
+      "nazev": "Castle Street",
+      "adresa": "Castle Street",
+      "obec": "Slough",
+      "lat": 51.50387,
+      "lng": -0.58999,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-012",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Striptýzový klub, kde Doyle s Bennym chytají Suttona"
+        }
+      ],
+      "nazev": "Palace Theatre (zadní strana)",
+      "adresa": null,
+      "obec": "Watford",
+      "lat": 51.656,
+      "lng": -0.396,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": "Zdroj: „documented as“ natočeno za divadlem.",
+      "kontrola": null
+    },
+    {
+      "id": "L-013",
+      "epizody": [
+        "S01E01"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E01",
+          "popis": "Exteriér Nesbittova domu"
+        }
+      ],
+      "nazev": "Love Hill House",
+      "adresa": null,
+      "obec": "Wexham, Buckinghamshire",
+      "lat": 51.523,
+      "lng": -0.556,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Budova je rozdělená na čtyři byty/domy.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E01",
+          "url": "http://www.mark-1.co.uk/Professionals/a01.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-014",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Narafičená autonehoda, kterou Culver zatáhne sira Charlese do pasti"
+        }
+      ],
+      "nazev": "Kensington Gore",
+      "adresa": "Kensington Gore",
+      "obec": "Londýn – Kensington",
+      "lat": 51.50064,
+      "lng": -0.17708,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-015",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Dům Ann Seafordové, kde Sara a Simon chystají vydírání"
+        }
+      ],
+      "nazev": "Trinity Place",
+      "adresa": "Trinity Place",
+      "obec": "Windsor",
+      "lat": 51.47926,
+      "lng": -0.61358,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Schody ke dveřím odpovídají dílu.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-016",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Ann běží k Doylovu starému bytu"
+        }
+      ],
+      "nazev": "Hammersmith Bridge Road",
+      "adresa": "Hammersmith Bridge Road",
+      "obec": "Londýn – Hammersmith",
+      "lat": 51.49003,
+      "lng": -0.22853,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Strom u dveří byl přesazen o pár metrů.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-017",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Kluci jedou k Annině domu"
+        }
+      ],
+      "nazev": "Clarendon Road / Station Road",
+      "adresa": "Clarendon Road a Station Road",
+      "obec": "Watford",
+      "lat": 51.65995,
+      "lng": -0.39699,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Poznat jde jen zídka a branka domu západně od nádraží.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-018",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Simon navštíví svého společníka Sama Bakera"
+        }
+      ],
+      "nazev": "Mount Fidget",
+      "adresa": "Fulmer Common Road",
+      "obec": "Fulmer",
+      "lat": 51.55288,
+      "lng": -0.55541,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-019",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Doyle kupuje cigarety jako „úplatek“ při sledování Annina pasáka"
+        }
+      ],
+      "nazev": "Obchod Dollond & Aitchison",
+      "adresa": null,
+      "obec": "Watford",
+      "lat": 51.656,
+      "lng": -0.397,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": "Zdroj uvádí jen obchod a město, souřadnice ukazují střed Watfordu.",
+      "kontrola": null
+    },
+    {
+      "id": "L-020",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Simon veze Saru k domu Joanny a Wencese kolem Birch Court"
+        }
+      ],
+      "nazev": "Rickmansworth Road (Birch Court)",
+      "adresa": "Rickmansworth Road",
+      "obec": "Northwood",
+      "lat": 51.61137,
+      "lng": -0.43335,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-021",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Dům Joanny a Wencese"
+        }
+      ],
+      "nazev": "Fulmer Drive",
+      "adresa": "Fulmer Drive",
+      "obec": "Fulmer",
+      "lat": 51.57044,
+      "lng": -0.55897,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Mnoho domů přestavěno, těžko identifikovatelné.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": "Zdroj: „documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-022",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Simon jede podat hlášení Samu Bakerovi"
+        }
+      ],
+      "nazev": "Batchworth Hill",
+      "adresa": "Batchworth Hill",
+      "obec": "Rickmansworth",
+      "lat": 51.6327,
+      "lng": -0.46388,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Malá garáž v pozadí zmizela.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-023",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Sara běží k Simonovu bytu"
+        }
+      ],
+      "nazev": "Prince Consort Road",
+      "adresa": "Prince Consort Road",
+      "obec": "Londýn – Kensington",
+      "lat": 51.49984,
+      "lng": -0.17719,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": "Interiéry Simonova bytu se točily v Harefield Grove.",
+      "kontrola": null
+    },
+    {
+      "id": "L-024",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Terkoff honí Saru po požárním schodišti za Simonovým domem"
+        }
+      ],
+      "nazev": "Mount Vernon Hospital (požární schodiště)",
+      "adresa": "Rickmansworth Road",
+      "obec": "Northwood",
+      "lat": 51.61137,
+      "lng": -0.43335,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-025",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Terkoff pronásleduje Saru do podzemních garáží"
+        }
+      ],
+      "nazev": "Parkoviště Cedars",
+      "adresa": null,
+      "obec": "Uxbridge",
+      "lat": 51.546,
+      "lng": -0.479,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Dnes pravděpodobně k nepoznání.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-026",
+      "epizody": [
+        "S01E02"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E02",
+          "popis": "Kluci vzdávají poslední poctu"
+        }
+      ],
+      "nazev": "Hřbitov Hillingdon Hill",
+      "adresa": "Hillingdon Hill",
+      "obec": "Hillingdon",
+      "lat": 51.53536,
+      "lng": -0.46419,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E02",
+          "url": "http://www.mark-1.co.uk/Professionals/a02.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-027",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Exteriér věznice, kam Charley Turkel jede za Henrym"
+        }
+      ],
+      "nazev": "Eton College",
+      "adresa": null,
+      "obec": "Eton",
+      "lat": 51.492,
+      "lng": -0.609,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-028",
+      "epizody": [
+        "S01E03",
+        "S01E06",
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Irští teroristé přepadají vojenskou základnu kvůli zbraním"
+        },
+        {
+          "epizoda": "S01E06",
+          "popis": "Hlavní brána jaderné elektrárny „Barrowsby“"
+        },
+        {
+          "epizoda": "S01E13",
+          "popis": "Zraněný Bodie v nemocnici (jen interiéry)"
+        }
+      ],
+      "nazev": "Harefield Hospital",
+      "adresa": null,
+      "obec": "Harefield",
+      "lat": 51.603,
+      "lng": -0.483,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Areál je od roku 1977 z velké části přestavěný; cihlový sloupek brány zůstal.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-029",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Škola Sinclairovy dcery"
+        }
+      ],
+      "nazev": "Park Mansion (areál Harefield Hospital)",
+      "adresa": null,
+      "obec": "Harefield",
+      "lat": 51.6025,
+      "lng": -0.4835,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "chátrá",
+      "stav_poznamka": "Dnes ve velmi špatném stavu.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-030",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Turkelovi lidé dohánějí irský gang"
+        }
+      ],
+      "nazev": "Bývalý areál Rockware Glass",
+      "adresa": null,
+      "obec": "Greenford",
+      "lat": 51.532,
+      "lng": -0.348,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Firma zavřela v roce 1973, areál je k nepoznání.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-031",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Malá farma Charleyho Turkela"
+        }
+      ],
+      "nazev": "Farma White Gates",
+      "adresa": "Harefield Road",
+      "obec": "Rickmansworth (jižně)",
+      "lat": 51.62973,
+      "lng": -0.47202,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Budovy vlevo odpovídají Street View.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-032",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Billy drží jako rukojmí zdravotní sestru"
+        }
+      ],
+      "nazev": "Bývalá Amersham Hospital",
+      "adresa": null,
+      "obec": "Amersham",
+      "lat": 51.664,
+      "lng": -0.616,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Přestavěno na byty pro seniory.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-033",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Bodie a Doyle vycházejí z Bodieho bytu (exteriér)"
+        }
+      ],
+      "nazev": "Holland Road",
+      "adresa": "Holland Road",
+      "obec": "Londýn – Kensington",
+      "lat": 51.50061,
+      "lng": -0.21128,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-034",
+      "epizody": [
+        "S01E03",
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Kluci spěchají za Cowleym; bílý policejní vůz na rohu Alma Road a Arthur Road"
+        },
+        {
+          "epizoda": "S01E04",
+          "popis": "Tommy prchá přes pustinu u Alma Road, je dopaden na polní cestě, padouši ujíždějí v bílém Range Roveru"
+        }
+      ],
+      "nazev": "Alma Road",
+      "adresa": "Alma Road",
+      "obec": "Windsor",
+      "lat": 51.47929,
+      "lng": -0.61607,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "S01E03: zdroj píše „documented as“, výhled zakrývají stromy, křižovatky ale sedí. Polní cestu z S01E04 nenašel na Street View.",
+      "kontrola": null
+    },
+    {
+      "id": "L-035",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Cowley, Bodie a Doyle probírají vyšetřování"
+        }
+      ],
+      "nazev": "Autobusové a nákladní parkoviště",
+      "adresa": null,
+      "obec": "Windsor",
+      "lat": 51.4855,
+      "lng": -0.61,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Vyasfaltováno, jinak se příliš nezměnilo.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": "Zdroj neuvádí ulici.",
+      "kontrola": null
+    },
+    {
+      "id": "L-036",
+      "epizody": [
+        "S01E03"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Turkel bere rukojmí na policejní stanici"
+        }
+      ],
+      "nazev": "Policejní stanice Windsor",
+      "adresa": "St Leonard's Road",
+      "obec": "Windsor",
+      "lat": 51.47433,
+      "lng": -0.61514,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-037",
+      "epizody": [
+        "S01E03",
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E03",
+          "popis": "Parkuje policejní dodávka"
+        },
+        {
+          "epizoda": "S01E12",
+          "popis": "Začíná nepokoj, Cowley se na křižovatce setkává s Pattersonem"
+        }
+      ],
+      "nazev": "Keppel Street (křižovatka s Helena Road a Dagmar Road)",
+      "adresa": "Keppel Street",
+      "obec": "Windsor",
+      "lat": 51.4785,
+      "lng": -0.608,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Mnoho budov nahrazeno, tvar křižovatky sedí.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E03",
+          "url": "http://www.mark-1.co.uk/Professionals/a03.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-038",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Georgi najíždí na dvouproudovou silnici"
+        }
+      ],
+      "nazev": "Gerrards Cross – dvouproudovka",
+      "adresa": null,
+      "obec": "Gerrards Cross",
+      "lat": 51.586,
+      "lng": -0.555,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Zdroj uvádí jen obec.",
+      "kontrola": null
+    },
+    {
+      "id": "L-039",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Georgi nabírá svého klienta Costu"
+        }
+      ],
+      "nazev": "Windsor End",
+      "adresa": "Windsor End",
+      "obec": "Beaconsfield",
+      "lat": 51.60138,
+      "lng": -0.63658,
+      "souradnice": "zdroj",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "Waymarking WMMGN9",
+          "url": "https://www.waymarking.com/waymarks/WMMGN9_Windsor_End_Beaconsfield_Bucks_UK_Professionals_Killer_With_A_Long_Arm_1978"
+        }
+      ],
+      "poznamka": "Waymarking uvádí přesně Windsor End (souřadnice odtud), mark-1 jen „centrum Beaconsfieldu“. Shoda na úrovni obce.",
+      "kontrola": null
+    },
+    {
+      "id": "L-040",
+      "epizody": [
+        "S01E04",
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Motorkář-policista je zastřelen po zastavení za rychlost"
+        },
+        {
+          "epizoda": "S01E11",
+          "popis": "Mandy jede autem po silnici"
+        }
+      ],
+      "nazev": "Hedgerley Lane",
+      "adresa": "Hedgerley Lane",
+      "obec": "Gerrards Cross",
+      "lat": 51.57704,
+      "lng": -0.56952,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": "U S01E11 zdroj píše, že silnice je dlouhá několik mil a přesné místo nelze určit.",
+      "kontrola": null
+    },
+    {
+      "id": "L-041",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Mervin prohlíží Jaguar"
+        }
+      ],
+      "nazev": "Autoservis Amersham Motors",
+      "adresa": "Hill Avenue",
+      "obec": "Amersham",
+      "lat": 51.675,
+      "lng": -0.608,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Servis zmizel.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Zdroj město výslovně nejmenuje, vyplývá z názvu.",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-042",
+      "epizody": [
+        "S01E04",
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Exteriér Roveru na křižovatce s Woodcock Hill"
+        },
+        {
+          "epizoda": "S01E12",
+          "popis": "Kluci zatáčejí cestou za Annie; projíždějí kolem průmyslové zóny Harefield Road"
+        }
+      ],
+      "nazev": "Harefield Road, Batchworth",
+      "adresa": "Harefield Road",
+      "obec": "Batchworth",
+      "lat": 51.62973,
+      "lng": -0.47202,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Dva domy v pozadí zbořeny a nahrazeny.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "U S01E04 zdroj píše, že dohledání nesedí, možná nezdokumentovaná změna místa.",
+      "kontrola": null
+    },
+    {
+      "id": "L-043",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Georgiho první zkouška pušky"
+        }
+      ],
+      "nazev": "Farma na Jacks Lane",
+      "adresa": "Jacks Lane",
+      "obec": "Harefield",
+      "lat": 51.6063,
+      "lng": -0.49731,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Přesné místo těžko určit.",
+      "kontrola": null
+    },
+    {
+      "id": "L-044",
+      "epizody": [
+        "S01E04",
+        "S01E05",
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Nalezená řecká cigareta, kluci jedou za Tarkosem"
+        },
+        {
+          "epizoda": "S01E05",
+          "popis": "Cowley říká klukům, že člen gangu jmenoval Latymera"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "Doyle a Parker na noční hlídce, přejezd na Park Lane"
+        }
+      ],
+      "nazev": "Breakspear Road North",
+      "adresa": "Breakspear Road North",
+      "obec": "Harefield",
+      "lat": 51.60298,
+      "lng": -0.47852,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": "Zdroj píše Breakspear Road (S01E04, S01E05) i Brakespear Road North (S01E09).",
+      "kontrola": null
+    },
+    {
+      "id": "L-045",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Kluci jedou do Tarkosovy restaurace a k Tommyho domu"
+        }
+      ],
+      "nazev": "Watford Road (u Dickinson Square)",
+      "adresa": "Watford Road",
+      "obec": "Croxley Green",
+      "lat": 51.64825,
+      "lng": -0.43942,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Zdroj obě scény označuje za podvod.",
+      "kontrola": null
+    },
+    {
+      "id": "L-046",
+      "epizody": [
+        "S01E04",
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Tarkosova restaurace (jen interiér)"
+        },
+        {
+          "epizoda": "S01E05",
+          "popis": "Doyle kupuje noviny"
+        }
+      ],
+      "nazev": "Station Parade",
+      "adresa": "Station Parade",
+      "obec": "Denham",
+      "lat": 51.57985,
+      "lng": -0.49987,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-047",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Tommyho dům (štáb na něj přidal číslo 40)"
+        }
+      ],
+      "nazev": "33 Osborne Road",
+      "adresa": "33 Osborne Road",
+      "obec": "Windsor",
+      "lat": 51.47464,
+      "lng": -0.61142,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Výrazně přestavěno.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-048",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Padouši doběhnou k Range Roveru; jízda k vyhlídce; výšková budova Minster Court"
+        }
+      ],
+      "nazev": "Hillcrest Road a Minster Court",
+      "adresa": "Hillcrest Road",
+      "obec": "Londýn – Ealing",
+      "lat": 51.52407,
+      "lng": -0.29507,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Jízda k vyhlídce je jen „documented as“ – kostel a okolí podle zdroje nesedí.",
+      "kontrola": null
+    },
+    {
+      "id": "L-049",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Mladý policista zadrží Cowleyho; Bodie identifikuje cíl"
+        }
+      ],
+      "nazev": "Park View Road",
+      "adresa": "Park View Road",
+      "obec": "Londýn – Ealing",
+      "lat": 51.52101,
+      "lng": -0.29567,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Dvojgaráž domu je od 1977 napůl přestavěná.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-050",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Padouši odjíždějí"
+        }
+      ],
+      "nazev": "St Mark's Road",
+      "adresa": "St Mark's Road",
+      "obec": "Windsor",
+      "lat": 51.4795,
+      "lng": -0.6165,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": "Určeno podle komínů domu u nové hasičské zbrojnice.",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-051",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Další zkouška pušky"
+        }
+      ],
+      "nazev": "Flackwell Heath Golf Club",
+      "adresa": null,
+      "obec": "High Wycombe",
+      "lat": 51.605,
+      "lng": -0.71,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Bod leží ve Flackwell Heath, zdroj uvádí High Wycombe (golfový klub je ve Flackwell Heath u High Wycombe)."
+    },
+    {
+      "id": "L-052",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Hildin nákup"
+        }
+      ],
+      "nazev": "Bazén na The Parade",
+      "adresa": "The Parade",
+      "obec": "Watford",
+      "lat": 51.657,
+      "lng": -0.396,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-053",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Kluci jedou k výškové budově"
+        }
+      ],
+      "nazev": "Packhorse Road",
+      "adresa": "Packhorse Road",
+      "obec": "Gerrards Cross",
+      "lat": 51.58846,
+      "lng": -0.5531,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Zelená kopule stále stojí.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-054",
+      "epizody": [
+        "S01E04"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E04",
+          "popis": "Královská rodina vyráží (trasa A332 a A308)"
+        }
+      ],
+      "nazev": "Windsorský hrad",
+      "adresa": null,
+      "obec": "Windsor",
+      "lat": 51.4838,
+      "lng": -0.6044,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E04",
+          "url": "http://www.mark-1.co.uk/Professionals/a04.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-055",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Pattersonův hotel a Latymerův herní klub"
+        }
+      ],
+      "nazev": "Holiday Inn (dnes Crowne Plaza)",
+      "adresa": null,
+      "obec": "West Drayton",
+      "lat": 51.513,
+      "lng": -0.465,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Dnes Crowne Plaza, vzhledu z roku 1977 se vůbec nepodobá.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-056",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Dům svědka Ralpha Maye (v příběhu Walkwood End, Beaconsfield)"
+        }
+      ],
+      "nazev": "52 Warren Road",
+      "adresa": "52 Warren Road",
+      "obec": "Ickenham",
+      "lat": 51.55942,
+      "lng": -0.46409,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Domy za Bodiem jsou „jakž takž“ poznat, hlavně ten bílý.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "Street View ukazuje č. 45, přispěvatel opravil na 52. Začátek a konec scény se točily s desetidenním odstupem.",
+      "kontrola": null
+    },
+    {
+      "id": "L-057",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Scéna s ochranou svědků v kavárně"
+        }
+      ],
+      "nazev": "Jock's Cafe",
+      "adresa": null,
+      "obec": "u Colnbrooku",
+      "lat": 51.484,
+      "lng": -0.525,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Silně přestavěno, ale „matně poznatelné“; Jock už ji nevlastní.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "Zdroj neuvádí silnici, souřadnice ukazují Colnbrook.",
+      "kontrola": null
+    },
+    {
+      "id": "L-058",
+      "epizody": [
+        "S01E05",
+        "S01E06",
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Honička po High Street"
+        },
+        {
+          "epizoda": "S01E06",
+          "popis": "Policejní vůz narazí do zátarasu u č. 25; Cusackova scéna a „CI5 HQ“ u č. 33"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "Kluci jedou za Jill Haydonovou"
+        }
+      ],
+      "nazev": "High Street, Harefield",
+      "adresa": "High Street",
+      "obec": "Harefield",
+      "lat": 51.60281,
+      "lng": -0.48287,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-059",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Úkryt padouchů"
+        }
+      ],
+      "nazev": "Bývalý pivovar",
+      "adresa": null,
+      "obec": "Watford",
+      "lat": 51.655,
+      "lng": -0.399,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Okolí téměř celé přestavěno.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "Zdroj uvádí jen „starý pivovar ve Watfordu“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-060",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Svědci na líbánkách"
+        }
+      ],
+      "nazev": "The Compleat Angler",
+      "adresa": null,
+      "obec": "Marlow",
+      "lat": 51.5675,
+      "lng": -0.772,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-061",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Domov svědka Sumnera"
+        }
+      ],
+      "nazev": "Southlea Court",
+      "adresa": "Southlea Court",
+      "obec": "Datchet",
+      "lat": 51.48,
+      "lng": -0.581,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "Zdroj píše „Datchett“.",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-062",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Nový úkryt gangu"
+        }
+      ],
+      "nazev": "Weir Bank",
+      "adresa": "Old Mill Lane",
+      "obec": "Bray",
+      "lat": 51.50772,
+      "lng": -0.69622,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "„Documented as“; zdroj místo na Googlu nedohledal.",
+      "kontrola": null
+    },
+    {
+      "id": "L-063",
+      "epizody": [
+        "S01E05"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E05",
+          "popis": "Cowley a agenti čekají na mostě na gang"
+        }
+      ],
+      "nazev": "Monkey Island Lane (most)",
+      "adresa": "Monkey Island Lane",
+      "obec": "Bray",
+      "lat": 51.50646,
+      "lng": -0.69289,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E05",
+          "url": "http://www.mark-1.co.uk/Professionals/a05.htm"
+        }
+      ],
+      "poznamka": "„Documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-064",
+      "epizody": [
+        "S01E06",
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Úvodní přistání letadla (exteriér)"
+        },
+        {
+          "epizoda": "S01E07",
+          "popis": "Terminál 3 – skupina Myer-Helmut si vyhlédne bohatého podnikatele"
+        }
+      ],
+      "nazev": "Letiště Heathrow",
+      "adresa": null,
+      "obec": "Londýn – Heathrow",
+      "lat": 51.471,
+      "lng": -0.456,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "Přesné místo v areálu neuvedeno.",
+      "kontrola": null
+    },
+    {
+      "id": "L-065",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Interiér letiště, eskorta vězně Kellera"
+        }
+      ],
+      "nazev": "Terminál TWA (dnes hotel)",
+      "adresa": null,
+      "obec": "Londýn – Kensington",
+      "lat": 51.4945,
+      "lng": -0.192,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Dnes hotel.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Zdroj neuvádí ulici.",
+      "kontrola": null
+    },
+    {
+      "id": "L-066",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Bankovní přepadení – zátaras u Grove Close, palba na policejní Triumph, útěk v armádním náklaďáku, konec honičky („Death Valley of Slough“), náklaďák u zelených dveří na Herschel Street"
+        }
+      ],
+      "nazev": "Alpha Street a okolí",
+      "adresa": "Alpha Street South / North, Grove Close, Herschel Street, Hencroft Street North",
+      "obec": "Slough",
+      "lat": 51.50506,
+      "lng": -0.58973,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-067",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Přepadení banky"
+        }
+      ],
+      "nazev": "54 High Street",
+      "adresa": "54 High Street",
+      "obec": "Eton",
+      "lat": 51.48925,
+      "lng": -0.60928,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Pár doplňkových záběrů se točilo o týdny později v Harefieldu.",
+      "kontrola": null
+    },
+    {
+      "id": "L-068",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Zablokovaný policejní Allegro; další Allegro pronásleduje gang"
+        }
+      ],
+      "nazev": "Newdigate Road",
+      "adresa": "Newdigate Road",
+      "obec": "Harefield",
+      "lat": 51.6062,
+      "lng": -0.47867,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-069",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Polák unáší malé letadlo"
+        }
+      ],
+      "nazev": "Letiště Leavesden",
+      "adresa": null,
+      "obec": "u Watfordu",
+      "lat": 51.69,
+      "lng": -0.42,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Jen „documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-070",
+      "epizody": [
+        "S01E06",
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Krátký záběr honičky s náklaďákem"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "Noční hlídka Doyla a Parkera (přejezd z Brakespear Road North)"
+        }
+      ],
+      "nazev": "Park Lane",
+      "adresa": "Park Lane",
+      "obec": "Harefield",
+      "lat": 51.60572,
+      "lng": -0.49191,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-071",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Gang přistává na padácích"
+        }
+      ],
+      "nazev": "Croxley Hall Wood",
+      "adresa": null,
+      "obec": "Croxley Green",
+      "lat": 51.638,
+      "lng": -0.452,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Záběry proudového letadla RAF jsou archivní.",
+      "kontrola": null
+    },
+    {
+      "id": "L-072",
+      "epizody": [
+        "S01E06",
+        "S01E08",
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Sinclairův dům – Krivas vrací kufřík"
+        },
+        {
+          "epizoda": "S01E08",
+          "popis": "Domov sira Ardena Frenche, jeho ložnice (exteriér převzat z S01E06)"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "Haydonův dům"
+        }
+      ],
+      "nazev": "Lockwell House",
+      "adresa": "White Hill",
+      "obec": "Batchworth Heath / Rickmansworth",
+      "lat": 51.62012,
+      "lng": -0.44549,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": "Zdroj uvádí obec jednou jako Batchworth Heath, jednou jako Rickmansworth. Ložnice u S01E08 jen „documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-073",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Krivas vyskakuje z dodávky a schovává se před policejním Range Roverem"
+        }
+      ],
+      "nazev": "White Hill a Mount Vernon Cottages",
+      "adresa": "White Hill",
+      "obec": "Batchworth Heath",
+      "lat": 51.62012,
+      "lng": -0.44549,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Obojí jen „documented as“, přesné místo těžko určit.",
+      "kontrola": null
+    },
+    {
+      "id": "L-074",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Kluci jedou k Bennymu"
+        }
+      ],
+      "nazev": "Russell Road",
+      "adresa": "Russell Road",
+      "obec": "Londýn – Kensington",
+      "lat": 51.49812,
+      "lng": -0.20939,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Jediný poznatelný orientační bod je poštovní schránka.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-075",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Kluci čekají na Bennyho"
+        }
+      ],
+      "nazev": "Hazlewood Towers",
+      "adresa": "Golborne Gardens",
+      "obec": "Londýn – North Kensington",
+      "lat": 51.5242,
+      "lng": -0.20664,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-076",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Druhý úkryt gangu"
+        }
+      ],
+      "nazev": "Štěrkovna na Moorhall Lane",
+      "adresa": "Moorhall Lane",
+      "obec": "Harefield",
+      "lat": 51.59,
+      "lng": -0.472,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": "Možná přestavěno.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "„Documented as… if correct“.",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-077",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Téměř srážka s náklaďákem"
+        }
+      ],
+      "nazev": "Hřbitov Woodcock Hill",
+      "adresa": "Woodcock Hill",
+      "obec": "Rickmansworth",
+      "lat": 51.61881,
+      "lng": -0.46848,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-078",
+      "epizody": [
+        "S01E06",
+        "S01E08",
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Krivasův náklaďák přepadne policejní vůz (severní konec)"
+        },
+        {
+          "epizoda": "S01E08",
+          "popis": "Kluci jedou k Turveyho domu"
+        },
+        {
+          "epizoda": "S01E09",
+          "popis": "Kluci projíždějí křižovatku s Newdigate Road"
+        }
+      ],
+      "nazev": "Rickmansworth Road, Harefield",
+      "adresa": "Rickmansworth Road",
+      "obec": "Harefield",
+      "lat": 51.60727,
+      "lng": -0.48051,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": "U S01E08 jen „may have been here“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-079",
+      "epizody": [
+        "S01E06"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E06",
+          "popis": "Odhozené motorky, přestřelka, rvačka Krivase s Bodiem"
+        }
+      ],
+      "nazev": "Springfield Lane",
+      "adresa": "Springfield Lane",
+      "obec": "Harefield",
+      "lat": 51.608,
+      "lng": -0.476,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E06",
+          "url": "http://www.mark-1.co.uk/Professionals/a06.htm"
+        }
+      ],
+      "poznamka": "Zdroj: „oblast Springfield Lane“.",
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-080",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Bodie a Julie na výletní lodi, Bodie zahlédne Myera; útěk přes zdymadlo"
+        }
+      ],
+      "nazev": "Boulter's Lock",
+      "adresa": null,
+      "obec": "Maidenhead",
+      "lat": 51.532,
+      "lng": -0.708,
+      "souradnice": "odhad",
+      "jistota": "oblast",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "Zdroj: „no indication of precisely where“, pravděpodobně u Boulter's Lock.",
+      "kontrola": null
+    },
+    {
+      "id": "L-081",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Parkoviště přístavu, kam dorazí zbytek gangu"
+        }
+      ],
+      "nazev": "Bushnell's Boat Yard",
+      "adresa": "Ray Mead Road",
+      "obec": "Maidenhead",
+      "lat": 51.52849,
+      "lng": -0.70145,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-082",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Honička úzkými silnicemi s ukradeným autem"
+        }
+      ],
+      "nazev": "Springwell Lane",
+      "adresa": "Springwell Lane",
+      "obec": "Rickmansworth",
+      "lat": 51.62265,
+      "lng": -0.49187,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "Nedaleko západně „spuštění“ člunu – místo nepojmenováno, budovy prý nahrazeny.",
+      "kontrola": null
+    },
+    {
+      "id": "L-083",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Honička pokračuje k hospodě"
+        }
+      ],
+      "nazev": "The Nag's Head",
+      "adresa": null,
+      "obec": "Little Missenden",
+      "lat": 51.681,
+      "lng": -0.668,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Bod je 900 m od nejbližší ulice, odhad je zřejmě mimo vesnici. Little Missenden v datech OS nemá vlastní ulice, nutná ruční kontrola."
+    },
+    {
+      "id": "L-084",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Julie sjede s Cortinou ze silnice; Cowley a Doyle projíždějí křižovatku, Doyle tu otáčí Granadu"
+        }
+      ],
+      "nazev": "Chesham Road (u Little Hundridge Lane)",
+      "adresa": "Chesham Road",
+      "obec": "Great Missenden",
+      "lat": 51.70226,
+      "lng": -0.66681,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "Sjetí ze silnice jen „I think“; křižovatka „appears to be“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-085",
+      "epizody": [
+        "S01E07"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E07",
+          "popis": "Trojice se schovává na faře; Inge naráží do verandy postavené pro díl; Bodie střílí na Granadu z Blind Lane"
+        }
+      ],
+      "nazev": "Hundridge Manor (jako fara)",
+      "adresa": null,
+      "obec": "u Great Missenden",
+      "lat": 51.706,
+      "lng": -0.642,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E07",
+          "url": "http://www.mark-1.co.uk/Professionals/a07.htm"
+        }
+      ],
+      "poznamka": "Střelba: podle dílu Blind Lane, ale točilo se trochu východně, přímo severně od sídla.",
+      "kontrola": "Odhad leží blíž Chesham než Great Missenden. Poloha sídla není v datech OS, nutná ruční kontrola (Blind Lane je v OS u 51.70891, -0.65232)."
+    },
+    {
+      "id": "L-086",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Dům Neila Turveyho (jen interiér)"
+        }
+      ],
+      "nazev": "Hall Barn",
+      "adresa": "Windsor End",
+      "obec": "Beaconsfield",
+      "lat": 51.60012,
+      "lng": -0.63584,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-087",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Dům bývalého detektiva Turnera"
+        }
+      ],
+      "nazev": "74 Rickmansworth Lane",
+      "adresa": "74 Rickmansworth Lane",
+      "obec": "Chalfont St Peter",
+      "lat": 51.61769,
+      "lng": -0.54997,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Podle Boba Rocci přestavěno k nepoznání.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-088",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Kluci vyšetřují Suzyinu smrt (první výskyt Doylova stříbrného Capri Mk II)"
+        }
+      ],
+      "nazev": "Frogmoor Lane",
+      "adresa": "Frogmoor Lane",
+      "obec": "Rickmansworth",
+      "lat": 51.63279,
+      "lng": -0.47181,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-089",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Záběry psího útulku Ann Berryové"
+        }
+      ],
+      "nazev": "Ruislip Kennels",
+      "adresa": "Fine Bush Lane",
+      "obec": "Harefield",
+      "lat": 51.58459,
+      "lng": -0.44515,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "chátrá",
+      "stav_poznamka": "Dnes opuštěné.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": "Hlavní akce se točila jinde (Pynesfield Manor).",
+      "kontrola": "Fine Bush Lane spadá v OS pod Ruislip/Hillingdon, zdroj uvádí Harefield (ulice vede mezi nimi)."
+    },
+    {
+      "id": "L-090",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Hlavní akce u útulku Ann Berryové"
+        }
+      ],
+      "nazev": "Pynesfield Manor",
+      "adresa": "Old Uxbridge Road",
+      "obec": "Harefield",
+      "lat": 51.61172,
+      "lng": -0.51078,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-091",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Kluci se vracejí k Turveyho domu kolem High Lodge"
+        }
+      ],
+      "nazev": "Harefield Road (jižní konec, High Lodge)",
+      "adresa": "Harefield Road",
+      "obec": "Harefield",
+      "lat": 51.62212,
+      "lng": -0.47008,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Bod padl do Woodcock Hill (Three Rivers), kousek severně od hranice Harefieldu. Jižní konec Harefield Road tam opravdu je, zdroj ho ale připisuje Harefieldu."
+    },
+    {
+      "id": "L-092",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Rozhovor s DC Haymerem na „lovu jelenů ve Skotsku“"
+        }
+      ],
+      "nazev": "Black Park",
+      "adresa": null,
+      "obec": "Iver",
+      "lat": 51.545,
+      "lng": -0.55,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": "Záběry jelenů jsou archivní.",
+      "kontrola": null
+    },
+    {
+      "id": "L-093",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Zadržení nájemného vraha Franka Goodmana"
+        }
+      ],
+      "nazev": "Lancaster Road × The Broadway",
+      "adresa": "Lancaster Road / The Broadway",
+      "obec": "Southall",
+      "lat": 51.51466,
+      "lng": -0.38356,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Zbyl jen šedý kamenný obklad budovy vpravo.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-094",
+      "epizody": [
+        "S01E08"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Kluci vezou Franka"
+        }
+      ],
+      "nazev": "The Crescent",
+      "adresa": "The Crescent",
+      "obec": "Southall",
+      "lat": 51.511,
+      "lng": -0.377,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Stejné odhadované souřadnice jako L-120 – ulice v OS nenalezena, nutná ruční kontrola."
+    },
+    {
+      "id": "L-095",
+      "epizody": [
+        "S01E08",
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E08",
+          "popis": "Frank připoutaný před hospodou White Lion (roh White Street a The Straight)"
+        },
+        {
+          "epizoda": "S01E13",
+          "popis": "Zadie zastaví nelegální vystěhování; kancelář Miller Trust; sem „přistane“ Arty po honičce po střechách"
+        }
+      ],
+      "nazev": "White Street (vč. hospody White Lion)",
+      "adresa": "White Street",
+      "obec": "Southall",
+      "lat": 51.505,
+      "lng": -0.382,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Okolí zbořeno a přestavěno; ulici pohltila British Gas.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E08",
+          "url": "http://www.mark-1.co.uk/Professionals/a08.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Ulice v datech OS nenalezena, ponechán odhad."
+    },
+    {
+      "id": "L-096",
+      "epizody": [
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E09",
+          "popis": "Hospoda Harryho Scotta, kde Haydon v roce 1971 vyhrožuje Fitchovi"
+        }
+      ],
+      "nazev": "The Buccaneer (dnes The Bellhouse)",
+      "adresa": "Oxford Road",
+      "obec": "Beaconsfield",
+      "lat": 51.605,
+      "lng": -0.62,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Zbořeno, na místě stojí The Bellhouse Hotel.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Oxford Road v Beaconsfieldu v datech OS není (jen úsek u Gerrards Cross). Ponechán odhad, nutná ruční kontrola."
+    },
+    {
+      "id": "L-097",
+      "epizody": [
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E09",
+          "popis": "Exteriér Fitchova domu (v příběhu Ambury Mansions)"
+        }
+      ],
+      "nazev": "„Montrose“, 95 Langley Road",
+      "adresa": "95 Langley Road",
+      "obec": "Watford",
+      "lat": 51.6671,
+      "lng": -0.40698,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Budova byla podle všeho nahrazena.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-098",
+      "epizody": [
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E09",
+          "popis": "Doyle honí Haydona po střelbě, kolem hospody The Harefield"
+        }
+      ],
+      "nazev": "Merle Avenue",
+      "adresa": "Merle Avenue",
+      "obec": "Harefield",
+      "lat": 51.60304,
+      "lng": -0.48467,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-099",
+      "epizody": [
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E09",
+          "popis": "Doyle a policie hledají v parku zbraň"
+        }
+      ],
+      "nazev": "Oxhey Park",
+      "adresa": "Eastbury Road",
+      "obec": "Watford",
+      "lat": 51.64358,
+      "lng": -0.39265,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": "Zdroj píše „Oxkey Park“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-100",
+      "epizody": [
+        "S01E09"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E09",
+          "popis": "Doyle zjistí, že Haydonovo staré auto je na prodej"
+        }
+      ],
+      "nazev": "Autosalon J R Inwards",
+      "adresa": "High Street × Midcroft",
+      "obec": "Ruislip",
+      "lat": 51.57453,
+      "lng": -0.42498,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Dnes pobočka Halifaxu, okolní budovy beze změny.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E09",
+          "url": "http://www.mark-1.co.uk/Professionals/a09.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-101",
+      "epizody": [
+        "S01E10"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E10",
+          "popis": "Kuželna, parkoviště, střecha (Bodie a postava Pamely Stephensonové), Fraser ztrácí kontrolu nad autem"
+        }
+      ],
+      "nazev": "Humber Bowling (kuželna)",
+      "adresa": "King Harry Street",
+      "obec": "Hemel Hempstead",
+      "lat": 51.75015,
+      "lng": -0.47171,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Kuželna zbořena v 80. letech.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E10",
+          "url": "http://www.mark-1.co.uk/Professionals/a10.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-102",
+      "epizody": [
+        "S01E10",
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E10",
+          "popis": "Smrtelně zraněný Fraser nabourá auto"
+        },
+        {
+          "epizoda": "S01E12",
+          "popis": "Závěrečné zúčtování"
+        }
+      ],
+      "nazev": "Highbridge Industrial Estate",
+      "adresa": null,
+      "obec": "Uxbridge",
+      "lat": 51.548,
+      "lng": -0.485,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Kompletně přestavěno.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E10",
+          "url": "http://www.mark-1.co.uk/Professionals/a10.htm"
+        },
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "U S01E10 zdroj neříká výslovně, že se tu točilo. Stav podle S01E12.",
+      "kontrola": null
+    },
+    {
+      "id": "L-103",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Cowley stoupá po schodech budovy CI5, recepce, policejní stanice"
+        }
+      ],
+      "nazev": "Továrna Horlicks",
+      "adresa": "Stoke Poges Lane",
+      "obec": "Slough",
+      "lat": 51.52123,
+      "lng": -0.59912,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Převzala GlaxoSmithKline, exteriér poznatelný.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": "Zdroj u ulice uvádí obec Colnbrook; Stoke Poges Lane vede ve Slough – ověřit v kroku 3.",
+      "kontrola": null
+    },
+    {
+      "id": "L-104",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Mandy zatáčí domů a Ramos ji unese"
+        }
+      ],
+      "nazev": "Fulmer Rise Manor",
+      "adresa": null,
+      "obec": "Fulmer",
+      "lat": 51.565,
+      "lng": -0.555,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": "Soukromý pozemek.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": "Jen „thought to be“, nelze ověřit.",
+      "kontrola": null
+    },
+    {
+      "id": "L-105",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Mitchellův dům – interiéry a pozemek, kluci se vloupávají"
+        }
+      ],
+      "nazev": "Black Firs",
+      "adresa": "Fulmer Common Road",
+      "obec": "Fulmer",
+      "lat": 51.55288,
+      "lng": -0.55541,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": "„Apparently“ / „appears“. Na Mitchellův dům se použila tři sídla.",
+      "kontrola": null
+    },
+    {
+      "id": "L-106",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Vnější zdi Mitchellova domu; přijíždějí lupiči; Doyle vidí odjíždět Mitchellův Jaguar"
+        }
+      ],
+      "nazev": "South View Lodge",
+      "adresa": "Hedgerley Lane",
+      "obec": "Gerrards Cross",
+      "lat": 51.57704,
+      "lng": -0.56952,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": "Zdroj název uvádí jednou jako „South Lodge View“, jednou „South View Lodge“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-107",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Ramos drží Mandy v budově"
+        }
+      ],
+      "nazev": "Sandown Road",
+      "adresa": "Sandown Road",
+      "obec": "Watford",
+      "lat": 51.67385,
+      "lng": -0.39301,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": "V době natáčení určeno k demolici.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-108",
+      "epizody": [
+        "S01E11"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E11",
+          "popis": "Kluci spěchají zachránit Mandy"
+        }
+      ],
+      "nazev": "Church Lane",
+      "adresa": "Church Lane",
+      "obec": "Stoke Poges",
+      "lat": 51.53614,
+      "lng": -0.58972,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E11",
+          "url": "http://www.mark-1.co.uk/Professionals/a11.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-109",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Konference v New Yorku a Anniina návštěva v UK (kino Regal); závěrečný průjezd kolem plakátu Annie"
+        }
+      ],
+      "nazev": "High Street, Uxbridge (kino Regal)",
+      "adresa": "High Street",
+      "obec": "Uxbridge",
+      "lat": 51.54596,
+      "lng": -0.47919,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "přestavěno",
+      "stav_poznamka": "Okolí kompletně změněné.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "Závěrečný záběr jen „documented as“, autor ho nazývá záhadou (jiné weby zmiňují autosalon Norman Reeves).",
+      "kontrola": null
+    },
+    {
+      "id": "L-110",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Anniin hotel (jen interiéry)"
+        }
+      ],
+      "nazev": "Skyline Hotel",
+      "adresa": null,
+      "obec": "Harlington",
+      "lat": 51.481,
+      "lng": -0.432,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "„Documented as“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-111",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Kluci se vracejí přes most na HQ, později vezou Annie za Cowleym"
+        }
+      ],
+      "nazev": "Most na Oxford Road (Swan and Bottle)",
+      "adresa": "Oxford Road",
+      "obec": "Uxbridge",
+      "lat": 51.54779,
+      "lng": -0.48353,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Vývěsní štít Swan and Bottle tam pořád je.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-112",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Exteriér základny Johna Howarda"
+        }
+      ],
+      "nazev": "Crown and Treaty",
+      "adresa": null,
+      "obec": "Uxbridge",
+      "lat": 51.547,
+      "lng": -0.484,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "Interiér v Harefield Grove.",
+      "kontrola": null
+    },
+    {
+      "id": "L-113",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Schází se gang Big Billyho"
+        }
+      ],
+      "nazev": "Gordon & Eve's Cafe",
+      "adresa": "20 Oxford Road",
+      "obec": "Uxbridge",
+      "lat": 51.54779,
+      "lng": -0.48353,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Dnes kadeřnictví.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-114",
+      "epizody": [
+        "S01E12"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E12",
+          "popis": "Dialog „Cowley and a Woman“; jízda s Annie na letiště; sanitka vyjíždí z dnešního vjezdu Uxbridge College"
+        }
+      ],
+      "nazev": "Park Road a Uxbridge Common",
+      "adresa": "Park Road / Chippendale Waye",
+      "obec": "Uxbridge",
+      "lat": 51.55079,
+      "lng": -0.47093,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E12",
+          "url": "http://www.mark-1.co.uk/Professionals/a12.htm"
+        }
+      ],
+      "poznamka": "Dialog jen „documented as… difficult to be certain“.",
+      "kontrola": null
+    },
+    {
+      "id": "L-115",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Klansmani napadnou Zadieho doma"
+        }
+      ],
+      "nazev": "3 Wood Lane",
+      "adresa": "3 Wood Lane",
+      "obec": "Iver Heath",
+      "lat": 51.53041,
+      "lng": -0.52902,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": "Dům je ze silnice špatně vidět.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": "Autorova fotka z 2012 možná ukazuje podobný sousední dům.",
+      "kontrola": null
+    },
+    {
+      "id": "L-116",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Kluci po rozhovoru se Zadiem najíždějí z kruháče"
+        }
+      ],
+      "nazev": "Slough Road (kruhový objezd)",
+      "adresa": "Slough Road",
+      "obec": "Iver Heath",
+      "lat": 51.53701,
+      "lng": -0.51757,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-117",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Hultonova skupina pomaluje vrata garáže; před domem rekvizita telefonní budky"
+        }
+      ],
+      "nazev": "28 Wood Lane Close",
+      "adresa": "28 Wood Lane Close",
+      "obec": "Iver Heath",
+      "lat": 51.53319,
+      "lng": -0.53102,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Ozdobná lampa ze záběru stojí na zahradě dodnes.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-118",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Klan najde Artyho na střeše č. 39; kancelář Empire Society za č. 68; parkoviště u kostela St Anselm"
+        }
+      ],
+      "nazev": "The Green (č. 39 a 68, kostel St Anselm)",
+      "adresa": "The Green",
+      "obec": "Southall",
+      "lat": 51.50354,
+      "lng": -0.38024,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Malá budova za Doylem (za č. 68) dodnes stojí.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": "Místo Artyho telefonátu není zdokumentováno.",
+      "kontrola": null
+    },
+    {
+      "id": "L-119",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Bodie vyslýchá Artyho kumpány"
+        }
+      ],
+      "nazev": "Vodárenská věž",
+      "adresa": "The Straight",
+      "obec": "Southall",
+      "lat": 51.50523,
+      "lng": -0.38498,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Přestavěno na soukromé byty.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": "Exteriér je vidět až později a jen částečně.",
+      "kontrola": null
+    },
+    {
+      "id": "L-120",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Doyle předstírá rvačku s Jaxem, aby pronikl do Empire Society"
+        }
+      ],
+      "nazev": "Hospoda White Hart",
+      "adresa": "49 High Street",
+      "obec": "Southall",
+      "lat": 51.511,
+      "lng": -0.377,
+      "souradnice": "odhad",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "zbořeno",
+      "stav_poznamka": "Později The Victory, zbořeno 2012.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": "Stejné odhadované souřadnice jako L-094 – High Street v Southallu v OS nenalezena, nutná ruční kontrola."
+    },
+    {
+      "id": "L-121",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Gang jede ke kanceláři Empire Society; Zadie jede ke Culverovu domu"
+        }
+      ],
+      "nazev": "Randolph Road",
+      "adresa": "Randolph Road",
+      "obec": "Southall",
+      "lat": 51.50671,
+      "lng": -0.37998,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "stojí",
+      "stav_poznamka": "Mnoho domů přestavěno; rohový dům s obloukovými dveřmi snadno poznatelný.",
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-122",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Gang projíždí kolem parku"
+        }
+      ],
+      "nazev": "Norwood Road",
+      "adresa": "Norwood Road",
+      "obec": "Southall",
+      "lat": 51.49874,
+      "lng": -0.37939,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    },
+    {
+      "id": "L-123",
+      "epizody": [
+        "S01E13"
+      ],
+      "sceny": [
+        {
+          "epizoda": "S01E13",
+          "popis": "Zbitý Doyle volá Cowleymu z telefonní budky (rekvizita)"
+        }
+      ],
+      "nazev": "Knihovna Southall",
+      "adresa": "Osterley Park Road",
+      "obec": "Southall",
+      "lat": 51.50307,
+      "lng": -0.37841,
+      "souradnice": "ulice",
+      "jistota": "pravděpodobné",
+      "stav_dnes": "neznámo",
+      "stav_poznamka": null,
+      "zdroje": [
+        {
+          "nazev": "mark-1.co.uk – S01E13",
+          "url": "http://www.mark-1.co.uk/Professionals/a13.htm"
+        }
+      ],
+      "poznamka": null,
+      "kontrola": null
+    }
+  ]
+}

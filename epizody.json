@@ -1,0 +1,587 @@
+{
+  "serial": "The Professionals (Profesionálové)",
+  "produkce": "Avengers Mark1 Productions / LWT, ITV",
+  "zdroje": [
+    "https://en.wikipedia.org/wiki/List_of_The_Professionals_episodes",
+    "https://epguides.com/Professionals/guide.shtml"
+  ],
+  "epizody": [
+    {
+      "kod": "S01E01",
+      "serie": 1,
+      "dil": 1,
+      "nazev": "Private Madness, Public Danger",
+      "vysilano": "1977-12-30",
+      "poradi_vysilani": 1,
+      "produkcni_kod": "1-06",
+      "poradi_nataceni": 6
+    },
+    {
+      "kod": "S01E02",
+      "serie": 1,
+      "dil": 2,
+      "nazev": "The Female Factor",
+      "vysilano": "1978-01-06",
+      "poradi_vysilani": 2,
+      "produkcni_kod": "1-07",
+      "poradi_nataceni": 7
+    },
+    {
+      "kod": "S01E03",
+      "serie": 1,
+      "dil": 3,
+      "nazev": "Old Dog with New Tricks",
+      "vysilano": "1978-01-13",
+      "poradi_vysilani": 3,
+      "produkcni_kod": "1-01",
+      "poradi_nataceni": 1
+    },
+    {
+      "kod": "S01E04",
+      "serie": 1,
+      "dil": 4,
+      "nazev": "Killer with a Long Arm",
+      "vysilano": "1978-01-20",
+      "poradi_vysilani": 4,
+      "produkcni_kod": "1-04",
+      "poradi_nataceni": 4
+    },
+    {
+      "kod": "S01E05",
+      "serie": 1,
+      "dil": 5,
+      "nazev": "Heroes",
+      "vysilano": "1978-01-27",
+      "poradi_vysilani": 5,
+      "produkcni_kod": "1-05",
+      "poradi_nataceni": 5
+    },
+    {
+      "kod": "S01E06",
+      "serie": 1,
+      "dil": 6,
+      "nazev": "Where the Jungle Ends",
+      "vysilano": "1978-02-03",
+      "poradi_vysilani": 6,
+      "produkcni_kod": "1-03",
+      "poradi_nataceni": 3
+    },
+    {
+      "kod": "S01E07",
+      "serie": 1,
+      "dil": 7,
+      "nazev": "Close Quarters",
+      "vysilano": "1978-02-10",
+      "poradi_vysilani": 7,
+      "produkcni_kod": "1-09",
+      "poradi_nataceni": 9
+    },
+    {
+      "kod": "S01E08",
+      "serie": 1,
+      "dil": 8,
+      "nazev": "Everest Was Also Conquered",
+      "vysilano": "1978-02-17",
+      "poradi_vysilani": 8,
+      "produkcni_kod": "1-08",
+      "poradi_nataceni": 8
+    },
+    {
+      "kod": "S01E09",
+      "serie": 1,
+      "dil": 9,
+      "nazev": "When the Heat Cools Off",
+      "vysilano": "1978-02-24",
+      "poradi_vysilani": 9,
+      "produkcni_kod": "1-13",
+      "poradi_nataceni": 13
+    },
+    {
+      "kod": "S01E10",
+      "serie": 1,
+      "dil": 10,
+      "nazev": "Stake Out",
+      "vysilano": "1978-03-03",
+      "poradi_vysilani": 10,
+      "produkcni_kod": "1-12",
+      "poradi_nataceni": 12
+    },
+    {
+      "kod": "S01E11",
+      "serie": 1,
+      "dil": 11,
+      "nazev": "Long Shot",
+      "vysilano": "1978-03-10",
+      "poradi_vysilani": 11,
+      "produkcni_kod": "1-02",
+      "poradi_nataceni": 2
+    },
+    {
+      "kod": "S01E12",
+      "serie": 1,
+      "dil": 12,
+      "nazev": "Look After Annie",
+      "vysilano": "1978-03-17",
+      "poradi_vysilani": 12,
+      "produkcni_kod": "1-11",
+      "poradi_nataceni": 11
+    },
+    {
+      "kod": "S01E13",
+      "serie": 1,
+      "dil": 13,
+      "nazev": "Klansmen",
+      "vysilano": null,
+      "poradi_vysilani": null,
+      "produkcni_kod": "1-10",
+      "poradi_nataceni": 10,
+      "poznamka": "Nikdy neodvysíláno na britské pozemní TV. Epguides řadí jako 1x13, Wikipedie bez čísla."
+    },
+    {
+      "kod": "S02E01",
+      "serie": 2,
+      "dil": 1,
+      "nazev": "Hunter/Hunted",
+      "vysilano": "1978-10-07",
+      "poradi_vysilani": 13,
+      "produkcni_kod": "2-02",
+      "poradi_nataceni": 15
+    },
+    {
+      "kod": "S02E02",
+      "serie": 2,
+      "dil": 2,
+      "nazev": "The Rack",
+      "vysilano": "1978-10-14",
+      "poradi_vysilani": 14,
+      "produkcni_kod": "2-04",
+      "poradi_nataceni": 17
+    },
+    {
+      "kod": "S02E03",
+      "serie": 2,
+      "dil": 3,
+      "nazev": "First Night",
+      "vysilano": "1978-10-21",
+      "poradi_vysilani": 15,
+      "produkcni_kod": "2-03",
+      "poradi_nataceni": 16
+    },
+    {
+      "kod": "S02E04",
+      "serie": 2,
+      "dil": 4,
+      "nazev": "Man Without a Past",
+      "vysilano": "1978-10-28",
+      "poradi_vysilani": 16,
+      "produkcni_kod": "2-05",
+      "poradi_nataceni": 18
+    },
+    {
+      "kod": "S02E05",
+      "serie": 2,
+      "dil": 5,
+      "nazev": "In the Public Interest",
+      "vysilano": "1978-11-04",
+      "poradi_vysilani": 17,
+      "produkcni_kod": "2-06",
+      "poradi_nataceni": 19
+    },
+    {
+      "kod": "S02E06",
+      "serie": 2,
+      "dil": 6,
+      "nazev": "Rogue",
+      "vysilano": "1978-11-11",
+      "poradi_vysilani": 18,
+      "produkcni_kod": "2-01",
+      "poradi_nataceni": 14
+    },
+    {
+      "kod": "S02E07",
+      "serie": 2,
+      "dil": 7,
+      "nazev": "Not a Very Civil Civil Servant",
+      "vysilano": "1978-11-18",
+      "poradi_vysilani": 19,
+      "produkcni_kod": "2-07",
+      "poradi_nataceni": 20
+    },
+    {
+      "kod": "S02E08",
+      "serie": 2,
+      "dil": 8,
+      "nazev": "A Stirring of Dust",
+      "vysilano": "1978-11-25",
+      "poradi_vysilani": 20,
+      "produkcni_kod": "2-08",
+      "poradi_nataceni": 21
+    },
+    {
+      "kod": "S02E09",
+      "serie": 2,
+      "dil": 9,
+      "nazev": "Blind Run",
+      "vysilano": "1978-12-02",
+      "poradi_vysilani": 21,
+      "produkcni_kod": "2-09",
+      "poradi_nataceni": 22
+    },
+    {
+      "kod": "S02E10",
+      "serie": 2,
+      "dil": 10,
+      "nazev": "Fall Girl",
+      "vysilano": "1978-12-09",
+      "poradi_vysilani": 22,
+      "produkcni_kod": "2-10",
+      "poradi_nataceni": 23
+    },
+    {
+      "kod": "S03E01",
+      "serie": 3,
+      "dil": 1,
+      "nazev": "The Purging of CI5",
+      "vysilano": "1979-10-27",
+      "poradi_vysilani": 23,
+      "produkcni_kod": "3-07",
+      "poradi_nataceni": 33
+    },
+    {
+      "kod": "S03E02",
+      "serie": 3,
+      "dil": 2,
+      "nazev": "Backtrack",
+      "vysilano": "1979-11-03",
+      "poradi_vysilani": 24,
+      "produkcni_kod": "2-11",
+      "poradi_nataceni": 24
+    },
+    {
+      "kod": "S03E03",
+      "serie": 3,
+      "dil": 3,
+      "nazev": "Stopover",
+      "vysilano": "1979-11-10",
+      "poradi_vysilani": 25,
+      "produkcni_kod": "3-01",
+      "poradi_nataceni": 27
+    },
+    {
+      "kod": "S03E04",
+      "serie": 3,
+      "dil": 4,
+      "nazev": "Dead Reckoning",
+      "vysilano": "1979-11-17",
+      "poradi_vysilani": 26,
+      "produkcni_kod": "3-04",
+      "poradi_nataceni": 30
+    },
+    {
+      "kod": "S03E05",
+      "serie": 3,
+      "dil": 5,
+      "nazev": "The Madness of Mickey Hamilton",
+      "vysilano": "1979-11-24",
+      "poradi_vysilani": 27,
+      "produkcni_kod": "2-13",
+      "poradi_nataceni": 26
+    },
+    {
+      "kod": "S03E06",
+      "serie": 3,
+      "dil": 6,
+      "nazev": "A Hiding to Nothing",
+      "vysilano": "1979-12-01",
+      "poradi_vysilani": 28,
+      "produkcni_kod": "3-03",
+      "poradi_nataceni": 29
+    },
+    {
+      "kod": "S03E07",
+      "serie": 3,
+      "dil": 7,
+      "nazev": "Runner",
+      "vysilano": "1979-12-08",
+      "poradi_vysilani": 29,
+      "produkcni_kod": "3-02",
+      "poradi_nataceni": 28
+    },
+    {
+      "kod": "S03E08",
+      "serie": 3,
+      "dil": 8,
+      "nazev": "Servant of Two Masters",
+      "alt_nazvy": [
+        "Master of Two Servants"
+      ],
+      "vysilano": "1979-12-15",
+      "poradi_vysilani": 30,
+      "produkcni_kod": "2-12",
+      "poradi_nataceni": 25
+    },
+    {
+      "kod": "S04E01",
+      "serie": 4,
+      "dil": 1,
+      "nazev": "The Acorn Syndrome",
+      "vysilano": "1980-09-07",
+      "poradi_vysilani": 31,
+      "produkcni_kod": "3-09",
+      "poradi_nataceni": 35
+    },
+    {
+      "kod": "S04E02",
+      "serie": 4,
+      "dil": 2,
+      "nazev": "Wild Justice",
+      "vysilano": "1980-09-14",
+      "poradi_vysilani": 32,
+      "produkcni_kod": "4-02",
+      "poradi_nataceni": 41
+    },
+    {
+      "kod": "S04E03",
+      "serie": 4,
+      "dil": 3,
+      "nazev": "Fugitive",
+      "vysilano": "1980-09-21",
+      "poradi_vysilani": 33,
+      "produkcni_kod": "3-08",
+      "poradi_nataceni": 34
+    },
+    {
+      "kod": "S04E04",
+      "serie": 4,
+      "dil": 4,
+      "nazev": "Involvement",
+      "vysilano": "1980-09-28",
+      "poradi_vysilani": 34,
+      "produkcni_kod": "3-13",
+      "poradi_nataceni": 39
+    },
+    {
+      "kod": "S04E05",
+      "serie": 4,
+      "dil": 5,
+      "nazev": "Need to Know",
+      "vysilano": "1980-10-05",
+      "poradi_vysilani": 35,
+      "produkcni_kod": "3-06",
+      "poradi_nataceni": 32
+    },
+    {
+      "kod": "S04E06",
+      "serie": 4,
+      "dil": 6,
+      "nazev": "Take Away",
+      "vysilano": "1980-10-12",
+      "poradi_vysilani": 36,
+      "produkcni_kod": "3-12",
+      "poradi_nataceni": 38
+    },
+    {
+      "kod": "S04E07",
+      "serie": 4,
+      "dil": 7,
+      "nazev": "Black Out",
+      "vysilano": "1980-10-19",
+      "poradi_vysilani": 37,
+      "produkcni_kod": "4-03",
+      "poradi_nataceni": 42
+    },
+    {
+      "kod": "S04E08",
+      "serie": 4,
+      "dil": 8,
+      "nazev": "Blood Sports",
+      "vysilano": "1980-10-26",
+      "poradi_vysilani": 38,
+      "produkcni_kod": "4-05",
+      "poradi_nataceni": 44
+    },
+    {
+      "kod": "S04E09",
+      "serie": 4,
+      "dil": 9,
+      "nazev": "Slush Fund",
+      "vysilano": "1980-11-02",
+      "poradi_vysilani": 39,
+      "produkcni_kod": "3-10",
+      "poradi_nataceni": 36
+    },
+    {
+      "kod": "S04E10",
+      "serie": 4,
+      "dil": 10,
+      "nazev": "The Gun",
+      "vysilano": "1980-11-09",
+      "poradi_vysilani": 40,
+      "produkcni_kod": "4-01",
+      "poradi_nataceni": 40
+    },
+    {
+      "kod": "S04E11",
+      "serie": 4,
+      "dil": 11,
+      "nazev": "Hijack",
+      "vysilano": "1980-11-30",
+      "poradi_vysilani": 41,
+      "produkcni_kod": "4-06",
+      "poradi_nataceni": 45
+    },
+    {
+      "kod": "S04E12",
+      "serie": 4,
+      "dil": 12,
+      "nazev": "Mixed Doubles",
+      "vysilano": "1980-12-07",
+      "poradi_vysilani": 42,
+      "produkcni_kod": "3-05",
+      "poradi_nataceni": 31
+    },
+    {
+      "kod": "S04E13",
+      "serie": 4,
+      "dil": 13,
+      "nazev": "Weekend in the Country",
+      "vysilano": "1980-12-14",
+      "poradi_vysilani": 43,
+      "produkcni_kod": "3-11",
+      "poradi_nataceni": 37
+    },
+    {
+      "kod": "S04E14",
+      "serie": 4,
+      "dil": 14,
+      "nazev": "Kickback",
+      "vysilano": "1980-12-20",
+      "poradi_vysilani": 44,
+      "produkcni_kod": "4-08",
+      "poradi_nataceni": 47
+    },
+    {
+      "kod": "S04E15",
+      "serie": 4,
+      "dil": 15,
+      "nazev": "It's Only a Beautiful Picture...",
+      "vysilano": "1980-12-27",
+      "poradi_vysilani": 45,
+      "produkcni_kod": "4-04",
+      "poradi_nataceni": 43
+    },
+    {
+      "kod": "S05E01",
+      "serie": 5,
+      "dil": 1,
+      "nazev": "Foxhole on the Roof",
+      "vysilano": "1982-11-07",
+      "poradi_vysilani": 46,
+      "produkcni_kod": "4-10",
+      "poradi_nataceni": 49
+    },
+    {
+      "kod": "S05E02",
+      "serie": 5,
+      "dil": 2,
+      "nazev": "Operation Susie",
+      "vysilano": "1982-11-14",
+      "poradi_vysilani": 47,
+      "produkcni_kod": "4-12",
+      "poradi_nataceni": 51
+    },
+    {
+      "kod": "S05E03",
+      "serie": 5,
+      "dil": 3,
+      "nazev": "You'll Be All Right",
+      "vysilano": "1982-11-21",
+      "poradi_vysilani": 48,
+      "produkcni_kod": "4-07",
+      "poradi_nataceni": 46
+    },
+    {
+      "kod": "S05E04",
+      "serie": 5,
+      "dil": 4,
+      "nazev": "Lawson's Last Stand",
+      "vysilano": "1982-11-28",
+      "poradi_vysilani": 49,
+      "produkcni_kod": "5-03",
+      "poradi_nataceni": 55
+    },
+    {
+      "kod": "S05E05",
+      "serie": 5,
+      "dil": 5,
+      "nazev": "Discovered in a Graveyard",
+      "alt_nazvy": [
+        "Discovered in a Grave Yard"
+      ],
+      "vysilano": "1982-12-05",
+      "poradi_vysilani": 50,
+      "produkcni_kod": "4-09",
+      "poradi_nataceni": 48
+    },
+    {
+      "kod": "S05E06",
+      "serie": 5,
+      "dil": 6,
+      "nazev": "Spy Probe",
+      "vysilano": "1982-12-12",
+      "poradi_vysilani": 51,
+      "produkcni_kod": "5-05",
+      "poradi_nataceni": 57
+    },
+    {
+      "kod": "S05E07",
+      "serie": 5,
+      "dil": 7,
+      "nazev": "Cry Wolf",
+      "vysilano": "1983-01-09",
+      "poradi_vysilani": 52,
+      "produkcni_kod": "5-01",
+      "poradi_nataceni": 53
+    },
+    {
+      "kod": "S05E08",
+      "serie": 5,
+      "dil": 8,
+      "nazev": "The Untouchables",
+      "vysilano": "1983-01-16",
+      "poradi_vysilani": 53,
+      "produkcni_kod": "4-13",
+      "poradi_nataceni": 52
+    },
+    {
+      "kod": "S05E09",
+      "serie": 5,
+      "dil": 9,
+      "nazev": "The Ojuka Situation",
+      "vysilano": "1983-01-23",
+      "poradi_vysilani": 54,
+      "produkcni_kod": "4-11",
+      "poradi_nataceni": 50
+    },
+    {
+      "kod": "S05E10",
+      "serie": 5,
+      "dil": 10,
+      "nazev": "A Man Called Quinn",
+      "vysilano": "1983-01-30",
+      "poradi_vysilani": 55,
+      "produkcni_kod": "5-02",
+      "poradi_nataceni": 54
+    },
+    {
+      "kod": "S05E11",
+      "serie": 5,
+      "dil": 11,
+      "nazev": "No Stone",
+      "vysilano": "1983-02-06",
+      "poradi_vysilani": 56,
+      "produkcni_kod": "5-04",
+      "poradi_nataceni": 56
+    }
+  ]
+}
