@@ -3,102 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CI5 · Lokace · The Professionals 1977–83</title>
+<title>CI5 · Operační mapa · The Professionals 1977–83</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d0e0f; --panel:#141516; --line:#26282a; --line2:#1c1d1f;
-  --tx:#e6e3dc; --tx2:#9a968d; --tx3:#64615b;
-  --amb:#e8a23a; --amb-d:#8a6123;
-  --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'IBM Plex Sans',system-ui,sans-serif;
-  --pw:380px;
+  --bg:#0b0c0d; --panel:#121314; --panel2:#17181a; --line:#24262a; --line2:#1b1c1f;
+  --tx:#e7e4dc; --tx2:#9c988f; --tx3:#625f59;
+  --amb:#e8a23a; --amb-d:#7a5520; --silver:#b9bcc0;
+  --st-stoji:#e8a23a; --st-prest:#7d9bb0; --st-zbor:#c4553b; --st-nezn:#8e9196;
+  --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'IBM Plex Sans',system-ui,sans-serif; --cond:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;
+  --pw:400px; --lw:232px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:var(--bg);color:var(--tx);font:14px/1.45 var(--sans);overflow:hidden}
-#app{display:grid;grid-template-columns:1fr var(--pw);grid-template-rows:44px 1fr;height:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#app{display:grid;grid-template-columns:var(--lw) 1fr var(--pw);grid-template-rows:48px 1fr;height:100%}
 
-/* top bar */
-#bar{grid-column:1/3;display:flex;align-items:center;gap:20px;padding:0 16px;border-bottom:1px solid var(--line);background:var(--bg);font-family:var(--mono);font-size:12px;letter-spacing:.04em}
-#bar .mark{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--tx)}
-#bar .mark i{display:block;width:10px;height:10px;background:var(--amb)}
-#bar .mark span{color:var(--tx3);font-weight:400}
-#bar .sep{flex:1}
-#bar label{color:var(--tx3);text-transform:uppercase;font-size:11px;display:flex;align-items:center;gap:8px}
-select{font:500 12px var(--mono);color:var(--tx);background:var(--panel);border:1px solid var(--line);padding:5px 26px 5px 8px;border-radius:0;appearance:none;cursor:pointer;
+/* ── horní lišta ── */
+#bar{grid-column:1/4;display:flex;align-items:stretch;border-bottom:1px solid var(--line);background:var(--bg)}
+.brand{display:flex;align-items:center;gap:12px;padding:0 16px;width:var(--lw);border-right:1px solid var(--line)}
+.badge{font:700 13px/1 var(--cond);letter-spacing:.08em;color:var(--bg);background:var(--amb);padding:5px 6px 4px}
+.brand b{font:600 13px var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.brand span{display:block;font:10px var(--mono);color:var(--tx3);letter-spacing:0;white-space:nowrap}
+.filters{display:flex;align-items:center;gap:18px;padding:0 18px;flex:1}
+.filters label{display:flex;align-items:center;gap:8px;font:600 11px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
+select{font:500 12px var(--mono);color:var(--tx);background:var(--panel);border:1px solid var(--line);padding:6px 26px 6px 9px;border-radius:0;appearance:none;cursor:pointer;
   background-image:linear-gradient(45deg,transparent 50%,var(--tx2) 50%),linear-gradient(135deg,var(--tx2) 50%,transparent 50%);
   background-position:calc(100% - 13px) 50%,calc(100% - 9px) 50%;background-size:4px 4px;background-repeat:no-repeat}
 select:focus{outline:1px solid var(--amb);outline-offset:-1px}
-#dil{max-width:300px}
-#count{color:var(--tx2);min-width:84px;text-align:right}
-#count b{color:var(--amb);font-weight:600}
+#dil{max-width:320px}
+.stat{display:flex;align-items:center;gap:22px;padding:0 18px;border-left:1px solid var(--line);width:var(--pw)}
+.stat div{font:11px var(--mono);color:var(--tx3);text-transform:uppercase;letter-spacing:.06em}
+.stat b{display:block;font:600 18px/1.1 var(--cond);color:var(--tx);letter-spacing:.02em}
+.stat b.a{color:var(--amb)}
+#btnLayers{display:none}
 
-/* map */
-#map{grid-row:2;background:#0b0c0d}
+/* ── vrstvy ── */
+#layers{grid-row:2;grid-column:1;border-right:1px solid var(--line);background:var(--panel);overflow-y:auto;padding-bottom:16px}
+.lh{font:600 11px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--tx3);padding:16px 16px 8px;display:flex;justify-content:space-between}
+.tog{display:grid;grid-template-columns:18px 1fr auto;align-items:center;gap:10px;width:100%;padding:6px 16px;text-align:left;font-size:13px}
+.tog:hover{background:var(--panel2)}
+.tog .n{font:11px var(--mono);color:var(--tx3)}
+.tog.off{color:var(--tx3)}
+.tog.off .sw{opacity:.25}
+.sw{width:12px;height:12px;justify-self:center}
+.sw.sq{border:2px solid var(--tx2);background:var(--bg)}
+.sw.fl{background:var(--tx2)}
+.sw.ci{border:1.5px dashed var(--tx2);border-radius:50%;width:14px;height:14px}
+.sw.c{border:2px solid}
+.sw.hq{width:14px;height:14px;border:2px solid var(--silver);box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 4px var(--silver)}
+.sw.rep{width:16px;height:16px;border:2px solid var(--tx2)}
+.sw.lb{font:600 9px var(--mono);color:var(--tx2);width:auto}
+.sep{height:1px;background:var(--line);margin:10px 16px 2px}
+.dist{display:flex;height:6px;margin:4px 16px 0;background:var(--line2)}
+.dist i{display:block;height:100%}
+
+/* ── mapa ── */
+#mapwrap{grid-row:2;grid-column:2;position:relative;min-width:0}
+#map{position:absolute;inset:0;background:#0a0b0c}
 .leaflet-container{font-family:var(--mono)}
-.leaflet-control-zoom a{background:var(--panel)!important;color:var(--tx2)!important;border-color:var(--line)!important;border-radius:0!important}
 .leaflet-control-zoom{border:1px solid var(--line)!important;border-radius:0!important}
-.leaflet-control-attribution{background:rgba(13,14,15,.8)!important;color:var(--tx3)!important;font-size:10px}
+.leaflet-control-zoom a{background:var(--panel)!important;color:var(--tx2)!important;border-color:var(--line)!important;border-radius:0!important}
+.leaflet-control-attribution{background:rgba(11,12,13,.85)!important;color:var(--tx3)!important;font-size:10px}
 .leaflet-control-attribution a{color:var(--tx2)!important}
-.osm-dark{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.3)}
-.pt{width:12px;height:12px;border:2px solid var(--amb);background:var(--bg);transition:transform .1s}
-.pt.v{background:var(--amb)}
-.pt.o{border-radius:50%;border-style:dashed;width:16px;height:16px;border-width:1.5px;background:transparent}
-.pt.dim{opacity:.18}
-.pt.sel{transform:scale(1.5);box-shadow:0 0 0 3px rgba(232,162,58,.25)}
-.mk:hover .pt{transform:scale(1.35)}
-.leaflet-tooltip.tt{background:var(--panel);border:1px solid var(--line);color:var(--tx);border-radius:0;box-shadow:none;font:500 11px var(--mono);padding:3px 7px}
+.leaflet-control-scale-line{background:rgba(11,12,13,.8);border-color:var(--tx3);color:var(--tx2);font:10px var(--mono)}
+.osm-dark{filter:invert(1) hue-rotate(180deg) brightness(.82) contrast(.9) saturate(.25)}
+#coords{position:absolute;left:12px;bottom:28px;z-index:500;font:11px var(--mono);color:var(--tx2);background:rgba(11,12,13,.85);border:1px solid var(--line);padding:4px 8px;pointer-events:none;letter-spacing:.03em}
+
+/* značky */
+.mk{position:relative}
+.m{position:absolute;left:50%;top:50%;width:10px;height:10px;transform:translate(-50%,-50%);border:2px solid var(--c);background:var(--bg);transition:transform .08s}
+.m.v{background:var(--c)}
+.m.o{width:16px;height:16px;border:1.5px dashed var(--c);border-radius:50%;background:transparent}
+.m.rep{width:14px;height:14px}
+.m.hq{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--silver)}
+.m.dim{opacity:.13}
+.mk:hover .m{transform:translate(-50%,-50%) scale(1.3)}
+.m.sel{transform:translate(-50%,-50%) scale(1.35)}
+.m.sel::before,.m.sel::after{content:"";position:absolute;background:var(--amb);left:50%;top:50%}
+.m.sel::before{width:46px;height:1px;transform:translate(-50%,-50%)}
+.m.sel::after{width:1px;height:46px;transform:translate(-50%,-50%)}
+.lbl{position:absolute;left:12px;top:-7px;font:600 10px var(--mono);color:var(--tx);background:rgba(11,12,13,.8);padding:1px 4px;white-space:nowrap;display:none;pointer-events:none}
+.show-lbl .lbl{display:block}
+.leaflet-tooltip.tt{background:var(--panel);border:1px solid var(--line);color:var(--tx);border-radius:0;box-shadow:none;font:500 11px var(--mono);padding:4px 8px}
 .leaflet-tooltip.tt:before{display:none}
+.leaflet-tooltip.tt em{font-style:normal;color:var(--amb);margin-right:6px}
 
-/* panel */
-#panel{grid-row:2;grid-column:2;border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0}
-#legend{display:flex;gap:14px;padding:10px 16px;border-bottom:1px solid var(--line);font:11px var(--mono);color:var(--tx3);text-transform:uppercase;letter-spacing:.04em}
-#legend span{display:flex;align-items:center;gap:6px}
-#legend .pt{width:9px;height:9px;border-width:1.5px}
-#legend .pt.o{width:11px;height:11px}
+/* ── spis ── */
+#panel{grid-row:2;grid-column:3;border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0}
 #scroll{overflow-y:auto;flex:1;min-height:0}
-#scroll::-webkit-scrollbar{width:8px}#scroll::-webkit-scrollbar-thumb{background:var(--line)}
-
-/* list */
-.grp{font:600 11px var(--mono);color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;padding:14px 16px 6px;border-bottom:1px solid var(--line2);display:flex;justify-content:space-between}
-.row{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:9px 16px;border-bottom:1px solid var(--line2);cursor:pointer}
-.row:hover{background:#1a1b1d}
+#scroll::-webkit-scrollbar,#layers::-webkit-scrollbar{width:8px}
+#scroll::-webkit-scrollbar-thumb,#layers::-webkit-scrollbar-thumb{background:var(--line)}
+.grp{font:600 11px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);padding:16px 16px 7px;border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;gap:12px}
+.grp span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.grp .ep{color:var(--amb)}
+.row{display:grid;grid-template-columns:14px 50px 1fr;gap:10px;align-items:start;padding:9px 16px;border-bottom:1px solid var(--line2);cursor:pointer}
+.row:hover{background:var(--panel2)}
+.row .d{width:8px;height:8px;margin-top:6px;border:2px solid var(--c)}
+.row .d.v{background:var(--c)}
+.row .d.o{border-style:dashed;border-radius:50%;border-width:1.5px;width:10px;height:10px}
 .row .id{font:500 11px var(--mono);color:var(--amb);padding-top:2px}
-.row .n{font-weight:500;color:var(--tx)}
-.row .m{font:11px var(--mono);color:var(--tx3);margin-top:2px}
+.row .n{font-weight:500}
+.row .m2{font:11px var(--mono);color:var(--tx3);margin-top:2px}
+.empty{padding:28px 16px;font:12px var(--mono);color:var(--tx3)}
 
-/* detail */
-#det .hd{padding:16px 16px 14px;border-bottom:1px solid var(--line)}
-#back{font:500 11px var(--mono);color:var(--tx2);background:none;border:0;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;padding:0;margin-bottom:14px}
+.hd{padding:16px 16px 14px;border-bottom:1px solid var(--line);background:linear-gradient(var(--panel2),var(--panel))}
+#back{font:600 11px var(--cond);color:var(--tx2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
 #back:hover{color:var(--amb)}
-.code{font:600 12px var(--mono);color:var(--amb);letter-spacing:.06em}
-#det h2{font:600 19px/1.25 var(--sans);margin:4px 0 6px}
+.file{display:flex;align-items:center;gap:8px;font:600 11px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
+.file .badge{font-size:11px;padding:4px 5px 3px}
+.hd h2{font:600 22px/1.2 var(--cond);letter-spacing:.01em;margin:10px 0 4px}
 .addr{color:var(--tx2)}
-.tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.tag{font:500 10.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;border:1px solid var(--line);color:var(--tx2)}
-.tag.a{border-color:var(--amb-d);color:var(--amb)}
+.chips{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.chip{font:600 10.5px var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border:1px solid var(--line);color:var(--tx2);display:flex;align-items:center;gap:6px}
+.chip i{width:7px;height:7px;background:var(--c)}
+.chip.a{border-color:var(--amb-d);color:var(--amb)}
+.chip.hq{border-color:#4a4c50;color:var(--silver)}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.meta div{padding:10px 16px;border-right:1px solid var(--line2);font:10px var(--cond);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
+.meta div:last-child{border-right:0}
+.meta b{display:block;font:600 15px var(--mono);color:var(--tx);letter-spacing:0;margin-top:2px}
+.ser{display:flex;gap:3px;margin-top:5px}
+.ser i{flex:1;height:14px;background:var(--line2);position:relative}
+.ser i.on{background:var(--amb)}
+.ser i span{position:absolute;inset:0;font:600 9px/14px var(--mono);text-align:center;color:var(--tx3)}
+.ser i.on span{color:var(--bg)}
 .sec{padding:14px 16px;border-bottom:1px solid var(--line2)}
-.sec h3{font:600 11px var(--mono);color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.sc{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:6px 0}
+.sec h3{font:600 11px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--tx3);margin-bottom:8px}
+.sc{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:7px 0}
 .sc+.sc{border-top:1px solid var(--line2)}
 .sc .e{font:500 11px var(--mono);color:var(--amb);padding-top:2px}
-.sc .t{font:500 12px var(--sans);color:var(--tx2);margin-bottom:2px}
-.kv{display:grid;grid-template-columns:62px 1fr;gap:10px;font-size:13px}
-.kv+.kv{margin-top:4px}
-.kv dt{font:11px var(--mono);color:var(--tx3);padding-top:2px;text-transform:uppercase}
+.sc .e small{display:block;color:var(--tx3);font-size:10px;margin-top:2px}
+.sc .t{font:600 12px var(--cond);letter-spacing:.04em;color:var(--tx2);margin-bottom:2px}
 .note{color:var(--tx2);font-size:13px}
 .src a{display:block;font:12px var(--mono);color:var(--tx2);text-decoration:none;padding:3px 0;word-break:break-all}
 .src a:hover{color:var(--amb)}
-.empty{padding:28px 16px;font:12px var(--mono);color:var(--tx3)}
 
-@media (max-width:820px){
-  :root{--pw:100%}
-  #app{grid-template-columns:1fr;grid-template-rows:auto 55% 45%}
-  #bar{grid-column:1;flex-wrap:wrap;gap:8px 14px;padding:8px 12px}
-  #bar .sep{display:none}
-  #dil{max-width:200px}
+@media (max-width:1100px){:root{--lw:200px;--pw:360px}.stat{gap:14px}}
+@media (max-width:860px){
+  #app{grid-template-columns:1fr;grid-template-rows:auto 52% 1fr}
+  #bar{grid-column:1;flex-wrap:wrap}
+  .brand{width:auto;border-right:0;flex:1}
+  .filters{order:3;width:100%;padding:8px 12px;border-top:1px solid var(--line);gap:12px}
+  .filters label:nth-of-type(2){flex:1;min-width:0}
+  #dil{max-width:none;width:100%}
+  .stat{display:none}
+  #coords{display:none}
+  #btnLayers{display:block;flex:none;font:600 11px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);border:1px solid var(--line);padding:7px 9px}
+  #layers{position:fixed;z-index:900;top:0;left:0;bottom:0;width:260px;transform:translateX(-100%);transition:transform .15s;grid-row:auto}
+  #layers.open{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.5)}
+  #mapwrap{grid-column:1}
   #panel{grid-column:1;grid-row:3;border-left:0;border-top:1px solid var(--line)}
 }
 </style>
@@ -106,170 +163,224 @@ select:focus{outline:1px solid var(--amb);outline-offset:-1px}
 <body>
 <div id="app">
   <header id="bar">
-    <div class="mark"><i></i>CI5 / LOKACE <span>THE PROFESSIONALS · LWT 1977–83</span></div>
-    <div class="sep"></div>
-    <label>Série <select id="serie"></select></label>
-    <label>Díl <select id="dil"></select></label>
-    <div id="count"></div>
-  </header>
-  <div id="map"></div>
-  <aside id="panel">
-    <div id="legend">
-      <span><i class="pt v"></i>ověřeno</span>
-      <span><i class="pt"></i>pravděpodobné</span>
-      <span><i class="pt o"></i>oblast</span>
+    <div class="brand"><div class="badge">CI5</div><div><b>Operační mapa</b><span>THE PROFESSIONALS · 1977–83</span></div></div>
+    <div class="filters">
+      <label>Série <select id="serie"></select></label>
+      <label>Díl <select id="dil"></select></label>
+      <button id="btnLayers">Vrstvy</button>
     </div>
-    <div id="scroll"></div>
-  </aside>
+    <div class="stat">
+      <div>Na mapě<b class="a" id="sCount">–</b></div>
+      <div>Dílů<b id="sEps">–</b></div>
+      <div>Stojí dodnes<b id="sStand">–</b></div>
+    </div>
+  </header>
+
+  <aside id="layers"></aside>
+
+  <div id="mapwrap"><div id="map"></div><div id="coords">– –</div></div>
+
+  <aside id="panel"><div id="scroll"></div></aside>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (async function(){
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const [E, LD] = await Promise.all([
-    fetch('epizody.json').then(r => r.json()),
-    fetch('lokace.json').then(r => r.json())
-  ]);
+  const [E, LD] = await Promise.all([fetch('epizody.json').then(r => r.json()), fetch('lokace.json').then(r => r.json())]);
   const eps = E.epizody, ep = Object.fromEntries(eps.map(e => [e.kod, e]));
   const lok = LD.lokace;
-  const POLOHA = {zdroj:'podle zdroje', ulice:'střed ulice', odhad:'přibližná', 'ověřeno':'ověřená'};
-  const JCLS = {'ověřeno':'v', 'pravděpodobné':'', 'oblast':'o'};
 
-  // map
-  const map = L.map('map', {zoomControl:true, attributionControl:true, preferCanvas:false}).setView([51.56, -0.47], 11);
+  // ── odvozené vlastnosti (jen z dat) ──
+  const STAV = {
+    stoji: {label:'Stojí', test:s => s === 'stojí', c:'var(--st-stoji)'},
+    prest: {label:'Přestavěno', test:s => s === 'přestavěno', c:'var(--st-prest)'},
+    zbor:  {label:'Zbořeno / chátrá', test:s => s === 'zbořeno' || s === 'chátrá', c:'var(--st-zbor)'},
+    nezn:  {label:'Stav neznámý', test:s => !s || s === 'neznámo', c:'var(--st-nezn)'}
+  };
+  const JIST = {
+    v: {label:'Ověřeno', test:j => j === 'ověřeno', sw:'fl'},
+    p: {label:'Pravděpodobné', test:j => j === 'pravděpodobné', sw:'sq'},
+    o: {label:'Oblast', test:j => j === 'oblast', sw:'ci'}
+  };
+  const stavKey = l => Object.keys(STAV).find(k => STAV[k].test(l.stav_dnes));
+  const jistKey = l => Object.keys(JIST).find(k => JIST[k].test(l.jistota)) || 'p';
+  const isHQ = l => l.zakladna_ci5 === true;
+  lok.forEach(l => { l._s = stavKey(l); l._j = jistKey(l); l._hq = isHQ(l); l._rep = l.epizody.length >= 3; });
+
+  const POLOHA = {zdroj:'ze zdroje', ulice:'střed ulice', odhad:'přibližná', 'ověřeno':'ověřená'};
+  const fmtDate = d => { if (!d) return 'neodvysíláno'; const [y, m, dd] = d.split('-'); return `${+dd}.${+m}.${y}`; };
+
+  // ── mapa ──
+  const map = L.map('map', {zoomControl:true, minZoom:8}).setView([51.53, -0.36], 11);
+  L.control.scale({imperial:false, position:'bottomright'}).addTo(map);
   const ESRI = 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/';
-  const base = L.tileLayer(ESRI + 'World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom:16, maxNativeZoom:16,
-    attribution:'Tiles &copy; Esri — Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-  const labels = L.tileLayer(ESRI + 'World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {maxZoom:16, maxNativeZoom:16}).addTo(map);
-  // fallback: OSM ztmavená filtrem, pokud Esri nenaběhne
+  const base = L.tileLayer(ESRI + 'World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {maxZoom:18, maxNativeZoom:16,
+    attribution:'Tiles &copy; Esri — Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+  const labels = L.tileLayer(ESRI + 'World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {maxZoom:18, maxNativeZoom:16}).addTo(map);
   let errs = 0, switched = false;
   base.on('tileerror', () => {
     if (switched || ++errs < 4) return;
     switched = true; map.removeLayer(base); map.removeLayer(labels);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom:19, className:'osm-dark',
-      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:18, className:'osm-dark',
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
   });
+  const coordsEl = document.getElementById('coords');
+  const dms = (v, p, n) => Math.abs(v).toFixed(4).replace('.', ',') + '° ' + (v >= 0 ? p : n);
+  coordsEl.textContent = dms(map.getCenter().lat, 's. š.', 'j. š.') + ' · ' + dms(map.getCenter().lng, 'v. d.', 'z. d.');
+  map.on('moveend', () => coordsEl.textContent = dms(map.getCenter().lat, 's. š.', 'j. š.') + ' · ' + dms(map.getCenter().lng, 'v. d.', 'z. d.'));
+  map.on('mousemove', e => coordsEl.textContent = dms(e.latlng.lat, 's. š.', 'j. š.') + ' · ' + dms(e.latlng.lng, 'v. d.', 'z. d.'));
 
-  // spread markers sharing (almost) the same point
+  // body se stejnou polohou rozložit do kroužku
   const groups = {};
-  lok.forEach(l => { const k = l.lat.toFixed(4)+','+l.lng.toFixed(4); (groups[k] ||= []).push(l); });
-  const markers = {};
+  lok.forEach(l => { const k = l.lat.toFixed(4) + ',' + l.lng.toFixed(4); (groups[k] ||= []).push(l); });
+  const mk = {};
   Object.values(groups).forEach(g => g.forEach((l, i) => {
     let ox = 0, oy = 0;
-    if (g.length > 1) { const a = (2*Math.PI*i)/g.length - Math.PI/2; ox = Math.round(Math.cos(a)*11); oy = Math.round(Math.sin(a)*11); }
-    const cls = JCLS[l.jistota] ?? '';
-    const sz = cls === 'o' ? 16 : 12;
-    const icon = L.divIcon({className:'mk', html:`<div class="pt ${cls}" data-id="${l.id}"></div>`, iconSize:[sz,sz], iconAnchor:[sz/2 - ox, sz/2 - oy]});
-    const m = L.marker([l.lat, l.lng], {icon, keyboard:false}).addTo(map);
-    m.bindTooltip(`${l.id}  ${esc(l.nazev)}`, {className:'tt', direction:'top', offset:[ox, oy - 8]});
+    if (g.length > 1) { const a = (2 * Math.PI * i) / g.length - Math.PI / 2, r = 9 + g.length; ox = Math.round(Math.cos(a) * r); oy = Math.round(Math.sin(a) * r); }
+    const cls = ['m', l._j === 'v' ? 'v' : '', l._j === 'o' ? 'o' : '', l._rep ? 'rep' : '', l._hq ? 'hq' : ''].join(' ');
+    const icon = L.divIcon({className:'mk', iconSize:[0, 0],
+      html:`<div style="position:absolute;left:${ox}px;top:${oy}px"><i class="${cls}" style="--c:${STAV[l._s].c}"></i><span class="lbl">${l.id}</span></div>`});
+    const m = L.marker([l.lat, l.lng], {icon, keyboard:false, riseOnHover:true});
+    m.bindTooltip(`<em>${l.id}</em>${esc(l.nazev)}`, {className:'tt', direction:'top', offset:[ox, oy - 10]});
     m.on('click', () => show(l.id, false));
-    markers[l.id] = m;
+    mk[l.id] = m;
   }));
 
-  // filters
+  // ── stav vrstev ──
+  const on = {stav:{stoji:1, prest:1, zbor:1, nezn:1}, jist:{v:1, p:1, o:1}, hq:0, rep:0, lbl:0};
   const selS = document.getElementById('serie'), selD = document.getElementById('dil');
   const series = [...new Set(eps.map(e => e.serie))];
-  selS.innerHTML = '<option value="">Vše</option>' + series.map(s => `<option value="${s}">${s}</option>`).join('');
+  selS.innerHTML = '<option value="">Vše</option>' + series.map(s => `<option value="${s}">${s}. série</option>`).join('');
   const nLoc = k => lok.filter(l => l.epizody.includes(k)).length;
   function fillDil(){
     const s = selS.value;
-    const list = eps.filter(e => !s || e.serie == s);
-    selD.innerHTML = '<option value="">Vše</option>' + list.map(e => {
+    selD.innerHTML = '<option value="">Vše</option>' + eps.filter(e => !s || e.serie == s).map(e => {
       const n = nLoc(e.kod);
-      return `<option value="${e.kod}"${n ? '' : ' disabled'}>${e.kod} · ${esc(e.nazev)}${n ? '' : ' (—)'}</option>`;
+      return `<option value="${e.kod}"${n ? '' : ' disabled'}>${e.kod} · ${esc(e.nazev)}</option>`;
     }).join('');
   }
-  const inFilter = l => {
+  const inEp = l => {
     const s = selS.value, d = selD.value;
     if (d) return l.epizody.includes(d);
     if (s) return l.epizody.some(k => ep[k]?.serie == s);
     return true;
   };
+  const layerOk = l => on.stav[l._s] && on.jist[l._j] && (!on.hq || l._hq) && (!on.rep || l._rep);
+
+  function renderLayers(){
+    const pool = lok.filter(inEp);
+    const cnt = f => pool.filter(f).length;
+    const total = pool.length || 1;
+    const t = (grp, k, label, sw, n) =>
+      `<button class="tog${(grp ? on[grp][k] : on[k]) ? '' : ' off'}" data-g="${grp || ''}" data-k="${k}">${sw}<span>${label}</span><span class="n">${n}</span></button>`;
+    let h = `<div class="lh"><span>Stav dnes</span></div>`;
+    h += `<div class="dist">${Object.keys(STAV).map(k => `<i style="width:${cnt(l => l._s === k) / total * 100}%;background:${STAV[k].c}"></i>`).join('')}</div><div style="height:6px"></div>`;
+    h += Object.keys(STAV).map(k => t('stav', k, STAV[k].label, `<i class="sw c" style="border-color:${STAV[k].c}"></i>`, cnt(l => l._s === k))).join('');
+    h += `<div class="sep"></div><div class="lh"><span>Jistota místa</span></div>`;
+    h += Object.keys(JIST).map(k => t('jist', k, JIST[k].label, `<i class="sw ${JIST[k].sw}"></i>`, cnt(l => l._j === k))).join('');
+    h += `<div class="sep"></div><div class="lh"><span>Zvýraznit</span></div>`;
+    h += t('', 'hq', 'Jen základny CI5', `<i class="sw hq"></i>`, cnt(l => l._hq));
+    h += t('', 'rep', 'Jen místa ze 3+ dílů', `<i class="sw rep"></i>`, cnt(l => l._rep));
+    h += t('', 'lbl', 'Kódy míst na mapě', `<i class="sw lb">L-</i>`, '');
+    document.getElementById('layers').innerHTML = h;
+  }
+  document.getElementById('layers').addEventListener('click', e => {
+    const b = e.target.closest('.tog'); if (!b) return;
+    const g = b.dataset.g, k = b.dataset.k;
+    if (g) on[g][k] = on[g][k] ? 0 : 1; else on[k] = on[k] ? 0 : 1;
+    if (k === 'lbl') map.getContainer().classList.toggle('show-lbl', !!on.lbl && map.getZoom() >= 14);
+    apply(false);
+  });
+  map.on('zoomend', () => map.getContainer().classList.toggle('show-lbl', !!on.lbl && map.getZoom() >= 14));
+  document.getElementById('btnLayers').onclick = () => document.getElementById('layers').classList.toggle('open');
 
   let current = null;
   const scroll = document.getElementById('scroll');
 
   function apply(fit){
-    const vis = lok.filter(inFilter);
+    const vis = lok.filter(l => layerOk(l) && inEp(l));
     lok.forEach(l => {
-      const el = markers[l.id].getElement()?.querySelector('.pt');
-      if (el) el.classList.toggle('dim', !inFilter(l));
-      markers[l.id].setZIndexOffset(inFilter(l) ? 500 : 0);
+      const m = mk[l.id], show = layerOk(l);
+      if (show && !map.hasLayer(m)) m.addTo(map);
+      if (!show && map.hasLayer(m)) map.removeLayer(m);
+      if (show) {
+        const el = m.getElement()?.querySelector('.m');
+        if (el) el.classList.toggle('dim', !inEp(l));
+        m.setZIndexOffset(inEp(l) ? (l._hq ? 900 : 500) : 0);
+      }
     });
-    document.getElementById('count').innerHTML = `<b>${vis.length}</b> / ${lok.length}`;
+    document.getElementById('sCount').textContent = vis.length;
+    document.getElementById('sEps').textContent = new Set(vis.flatMap(l => l.epizody.filter(k => {
+      const s = selS.value, d = selD.value; return d ? k === d : (!s || ep[k]?.serie == s);
+    }))).size;
+    document.getElementById('sStand').textContent = vis.filter(l => l._s === 'stoji').length;
+    renderLayers();
     if (fit && vis.length) {
-      // rámovat Londýn a okolí; vzdálená místa (Dover) zůstávají na mapě, ale neoddalují ji
       const core = vis.filter(l => map.distance([l.lat, l.lng], [51.51, -0.30]) < 50000);
-      const pts = (core.length ? core : vis).map(l => [l.lat, l.lng]);
-      map.fitBounds(L.latLngBounds(pts), {padding:[40,40], maxZoom:15});
+      map.fitBounds(L.latLngBounds((core.length ? core : vis).map(l => [l.lat, l.lng])), {padding:[40, 40], maxZoom:15});
     }
-    if (!current) list(vis);
+    if (!current) list(vis); else mark(current);
   }
 
+  const dot = l => `<i class="d ${l._j === 'v' ? 'v' : ''} ${l._j === 'o' ? 'o' : ''}" style="--c:${STAV[l._s].c}"></i>`;
   function list(vis){
-    if (!vis.length){ scroll.innerHTML = '<div class="empty">Žádná místa.</div>'; return; }
-    const d = selD.value;
-    // group by first episode in filter
+    if (!vis.length) { scroll.innerHTML = '<div class="empty">Žádná místa v aktuálním výběru.</div>'; return; }
+    const d = selD.value, s = selS.value;
     const by = {};
-    vis.forEach(l => {
-      const k = d || l.epizody.filter(x => !selS.value || ep[x]?.serie == selS.value)[0];
-      (by[k] ||= []).push(l);
-    });
-    const keys = Object.keys(by).sort();
-    scroll.innerHTML = keys.map(k => `
-      <div class="grp"><span>${k} · ${esc(ep[k]?.nazev)}</span><span>${by[k].length}</span></div>
-      ${by[k].map(l => `
-        <div class="row" data-id="${l.id}">
-          <div class="id">${l.id}</div>
-          <div><div class="n">${esc(l.nazev)}</div>
-          <div class="m">${esc(l.obec)}${l.epizody.length > 1 ? ' · ' + l.epizody.length + ' dílů' : ''}</div></div>
-        </div>`).join('')}`).join('');
+    vis.forEach(l => { const k = d || l.epizody.find(x => !s || ep[x]?.serie == s); (by[k] ||= []).push(l); });
+    scroll.innerHTML = Object.keys(by).sort().map(k => `
+      <div class="grp"><span><span class="ep">${k}</span> · ${esc(ep[k]?.nazev)}</span><span>${by[k].length}</span></div>
+      ${by[k].map(l => `<div class="row" data-id="${l.id}">${dot(l)}<div class="id">${l.id}</div>
+        <div><div class="n">${esc(l.nazev)}</div><div class="m2">${esc(l.obec)}${l.epizody.length > 1 ? ' · ' + l.epizody.length + ' dílů' : ''}${l._hq ? ' · základna CI5' : ''}</div></div></div>`).join('')}`).join('');
     scroll.scrollTop = 0;
   }
 
   function mark(id){
-    document.querySelectorAll('.pt.sel').forEach(e => e.classList.remove('sel'));
-    if (id) markers[id].getElement()?.querySelector('.pt')?.classList.add('sel');
+    document.querySelectorAll('.m.sel').forEach(e => e.classList.remove('sel'));
+    if (id && mk[id] && map.hasLayer(mk[id])) mk[id].getElement()?.querySelector('.m')?.classList.add('sel');
   }
 
   function show(id, pan){
     const l = lok.find(x => x.id === id); if (!l) return;
     current = id; mark(id);
     if (pan) map.setView([l.lat, l.lng], Math.max(map.getZoom(), 15));
-    const sceny = l.sceny.map(s => `
-      <div class="sc"><div class="e">${s.epizoda}</div>
-      <div><div class="t">${esc(ep[s.epizoda]?.nazev)}</div>${esc(s.popis)}</div></div>`).join('');
-    const stav = l.stav_dnes && l.stav_dnes !== 'neznámo' ? l.stav_dnes : null;
-    scroll.innerHTML = `<div id="det">
+    const first = l.epizody.map(k => ep[k]).filter(e => e?.vysilano).sort((a, b) => a.vysilano.localeCompare(b.vysilano))[0];
+    const perS = [1, 2, 3, 4, 5].map(s => l.epizody.filter(k => ep[k]?.serie === s).length);
+    const st = STAV[l._s];
+    scroll.innerHTML = `
       <div class="hd">
         <button id="back">← Seznam</button>
-        <div class="code">${l.id}</div>
+        <div class="file"><span class="badge">CI5</span>Spis ${l.id} · sektor ${esc(l.obec)}</div>
         <h2>${esc(l.nazev)}</h2>
-        <div class="addr">${l.adresa ? esc(l.adresa) + ', ' : ''}${esc(l.obec)}</div>
-        <div class="tags">
-          <span class="tag${l.jistota === 'ověřeno' ? ' a' : ''}">${esc(l.jistota)}</span>
-          <span class="tag">poloha: ${POLOHA[l.souradnice] ?? esc(l.souradnice)}</span>
-          ${stav ? `<span class="tag">${esc(stav)}</span>` : ''}
+        <div class="addr">${l.adresa ? esc(l.adresa) : 'Adresa neuvedena'}</div>
+        <div class="chips">
+          <span class="chip${l._j === 'v' ? ' a' : ''}">${esc(l.jistota)}</span>
+          <span class="chip" style="--c:${st.c}"><i></i>${st.label}</span>
+          <span class="chip">poloha: ${POLOHA[l.souradnice] ?? esc(l.souradnice)}</span>
+          ${l._hq ? '<span class="chip hq">základna CI5</span>' : ''}
         </div>
       </div>
-      <div class="sec"><h3>Scény</h3>${sceny}</div>
+      <div class="meta">
+        <div>Dílů<b>${l.epizody.length}</b></div>
+        <div>Poprvé<b>${first ? fmtDate(first.vysilano) : '—'}</b></div>
+        <div>Série<div class="ser">${perS.map((n, i) => `<i class="${n ? 'on' : ''}" title="${i + 1}. série: ${n}"><span>${i + 1}</span></i>`).join('')}</div></div>
+      </div>
+      <div class="sec"><h3>Scény</h3>${l.sceny.map(s => `
+        <div class="sc"><div class="e">${s.epizoda}<small>${ep[s.epizoda]?.vysilano ? fmtDate(ep[s.epizoda].vysilano) : 'neodvysíláno'}</small></div>
+        <div><div class="t">${esc(ep[s.epizoda]?.nazev)}</div>${esc(s.popis)}</div></div>`).join('')}</div>
       ${l.stav_poznamka ? `<div class="sec"><h3>Dnes</h3><div class="note">${esc(l.stav_poznamka)}</div></div>` : ''}
-      ${l.poznamka ? `<div class="sec"><h3>Poznámka</h3><div class="note">${esc(l.poznamka)}</div></div>` : ''}
-      <div class="sec src"><h3>Zdroje</h3>${l.zdroje.map(z => `<a href="${esc(z.url)}" target="_blank" rel="noopener">↗ ${esc(z.nazev)}</a>`).join('')}</div>
-    </div>`;
+      ${l.poznamka ? `<div class="sec"><h3>Poznámka ke zdrojům</h3><div class="note">${esc(l.poznamka)}</div></div>` : ''}
+      <div class="sec src"><h3>Zdroje</h3>${l.zdroje.map(z => `<a href="${esc(z.url)}" target="_blank" rel="noopener">↗ ${esc(z.nazev)}</a>`).join('')}</div>`;
     scroll.scrollTop = 0;
-    document.getElementById('back').onclick = () => { current = null; mark(null); apply(false); };
+    document.getElementById('back').onclick = close;
   }
+  function close(){ current = null; mark(null); apply(false); }
 
   scroll.addEventListener('click', e => { const r = e.target.closest('.row'); if (r) show(r.dataset.id, true); });
   selS.onchange = () => { fillDil(); current = null; mark(null); apply(true); };
   selD.onchange = () => { current = null; mark(null); apply(true); };
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && current){ current = null; mark(null); apply(false); } });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && current) close(); });
 
   fillDil();
   apply(true);
