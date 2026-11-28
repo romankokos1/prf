@@ -147,7 +147,7 @@ select option{background:var(--glass-solid);color:var(--tx)}
 .m.ping{animation:ping .55s var(--ease)}
 @keyframes ping{0%{box-shadow:0 0 0 0 var(--c)}100%{box-shadow:0 0 0 14px transparent}}
 .lbl{position:absolute;left:12px;top:-8px;font:600 10px var(--mono);color:var(--tx);background:var(--glass);border:1px solid var(--border);border-radius:4px;padding:1px 5px;white-space:nowrap;display:none;pointer-events:none}
-.show-lbl .lbl{display:block}
+.show-lbl .lbl,.ep-mode .lbl{display:block}
 /* shluky */
 .cl{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;font:600 12px var(--mono);color:var(--tx);
   background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1.5px solid var(--amb);box-shadow:0 0 0 4px var(--amb-soft),var(--shadow);
@@ -185,6 +185,16 @@ select option{background:var(--glass-solid);color:var(--tx)}
 .row .n{font-weight:500;transition:color .15s}
 .row .m2{font:11px var(--mono);color:var(--tx3);margin-top:3px}
 mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
+.fchips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:12px 20px 0}
+.fchips>.lab{margin-right:2px}
+.fchip{display:inline-flex;align-items:center;gap:7px;font:500 11px var(--mono);padding:4px 7px 4px 9px;border:1px solid var(--border);border-radius:999px;color:var(--tx);text-align:left;transition:border-color .15s,color .15s}
+.fchip:hover,.fchip:focus-visible{border-color:var(--amb);outline:none}
+.fchip .x{color:var(--tx3);font-size:13px;line-height:1}
+.fchip .ep{color:var(--amb-tx)}
+.fchip.go{font-family:var(--sans);font-size:12px}
+.row .why{font-size:12px;color:var(--tx3);margin-top:3px;line-height:1.4}
+.row .why .more{white-space:nowrap}
+.row .why em{font:500 10px var(--mono);font-style:normal;letter-spacing:.06em;text-transform:uppercase;margin-right:6px;color:var(--tx3)}
 .empty{padding:32px 20px;font:12px var(--mono);color:var(--tx3)}
 
 .hd{padding:20px 20px 16px;border-bottom:1px solid var(--line)}
@@ -212,7 +222,20 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
 .sec h3{margin-bottom:10px}
 .sc{display:grid;grid-template-columns:66px 1fr;gap:12px;padding:9px 0}
 .sc+.sc{border-top:1px solid var(--line)}
-.sc .e{font:500 11px var(--mono);color:var(--amb-tx);padding-top:2px}
+.sc .e{font:500 11px var(--mono);color:var(--amb-tx);padding-top:2px;text-align:left;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start}
+.sc button.e:hover,.sc button.e:focus-visible{text-decoration:underline;text-underline-offset:3px;outline:none}
+.sc.cur{background:var(--amb-soft);box-shadow:inset 3px 0 0 var(--amb);margin:0 -20px;padding:9px 20px}
+.sc.cur+.sc{border-top:0}
+.sc .t .cur-tag{color:var(--amb-tx)}
+.sc.none .note{font-size:12.5px}
+.epc{padding:18px 20px 6px}
+.epc h3{font:600 20px/1.2 var(--cond);letter-spacing:.01em;margin:6px 0 4px}
+.epc .ep{color:var(--amb-tx)}
+.epc .m2{font:11px var(--mono);color:var(--tx3);margin-top:3px}
+.epa{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.epa button,.epa a{font:600 11px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;padding:4px 0;transition:color .15s}
+.epa button:hover,.epa a:hover{color:var(--amb-tx)}
+.row .m3{font-size:12.5px;color:var(--tx2);margin-top:4px;line-height:1.4}
 .sc .e small{display:block;color:var(--tx3);font-size:10px;margin-top:2px}
 .sc .t{font:600 12px var(--cond);letter-spacing:.04em;color:var(--tx2);margin-bottom:2px}
 .note{color:var(--tx2);font-size:13px}
@@ -261,6 +284,9 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
   .sbody .filters label{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;gap:10px}
   .sbody select,.sbody #dil{width:100%;max-width:none;min-height:44px}
   .sbody .tog{min-height:44px;padding-top:8px;padding-bottom:8px}
+  .epa button,.epa a{min-height:44px;display:flex;align-items:center}
+  .sc .e{min-height:44px}
+  .fchip{min-height:36px;padding:6px 10px 6px 12px}
   .grp{background:var(--glass-solid)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -337,6 +363,9 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     l._tip = !!l.pruvodce;
     l._q = norm([l.id, l.nazev, l.obec, l.adresa, l.pruvodce?.oblast, l.pruvodce?.proc, ...l.epizody, ...l.epizody.map(k => ep[k]?.nazev), ...l.sceny.map(s => s.popis)].join(' '));
   });
+  // existující odkaz na stránku dílu (mark-1.co.uk) ze zdrojů míst
+  const epUrl = {};
+  lok.forEach(l => l.zdroje.forEach(z => { const m = /^mark-1\.co\.uk – (S\d\dE\d\d)$/.exec(z.nazev); if (m && !epUrl[m[1]]) epUrl[m[1]] = z.url; }));
   const POLOHA = {zdroj:'ze zdroje', ulice:'střed ulice', odhad:'přibližná', 'ověřeno':'ověřená'};
   const fmtDate = d => { if (!d) return 'neodvysíláno'; const [y, m, dd] = d.split('-'); return `${+dd}.${+m}.${y}`; };
 
@@ -390,6 +419,8 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
       return L.divIcon({className:'marker-cluster', iconSize:[s, s], html:`<div class="cl${hq ? ' hq' : ''}">${n}</div>`});
     }
   }).addTo(map);
+  const plain = L.layerGroup().addTo(map); // režim dílu: bez shlukování
+  const epMode = () => !!$('dil').value;
   // body se stejnou polohou rozložit do kroužku (po rozpadu shluků)
   const groups = {};
   lok.forEach(l => { const k = l.lat.toFixed(4) + ',' + l.lng.toFixed(4); (groups[k] ||= []).push(l); });
@@ -426,6 +457,10 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
   }
   const inEp = l => { const s = selS.value, d = selD.value; if (d) return l.epizody.includes(d); if (s) return l.epizody.some(k => ep[k]?.serie == s); return true; };
   const terms = () => norm(q.value).split(/\s+/).filter(Boolean);
+  const epQ = {}, epText = e => epQ[e.kod] ||= norm([e.kod, e.nazev, ...(e.alt_nazvy || [])].join(' '));
+  // díly, jejichž kód nebo název odpovídá hledání (jen díly s místy, bez právě vybraného)
+  const epMatch = () => { const ts = terms(); if (ts.join('').length < 2) return [];
+    return eps.filter(e => e.kod !== selD.value && nLoc(e.kod) && ts.every(t => epText(e).includes(t))); };
   const inQ = l => terms().every(t => l._q.includes(t));
   const layerOk = l => on.stav[l._s] && on.jist[l._j] && (!on.tip || l._tip) && (!on.hq || l._hq) && (!on.rep || l._rep);
   const visible = () => lok.filter(l => layerOk(l) && inEp(l) && inQ(l));
@@ -455,16 +490,18 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     lblClass(); apply(k === 'tip' || k === 'hq');
   };
   $('layersInner').addEventListener('click', onTog);
-  const lblClass = () => map.getContainer().classList.toggle('show-lbl', !!on.lbl && map.getZoom() >= 14);
+  const lblClass = () => { map.getContainer().classList.toggle('show-lbl', !!on.lbl && map.getZoom() >= 14); map.getContainer().classList.toggle('ep-mode', epMode()); };
   map.on('zoomend', lblClass);
 
-  let current = null, lastVis = [];
+  let current = null, lastVis = [], ret = null; // ret = spis, ze kterého se přešlo do dílu
   const listEl = () => mobile() ? $('sList') : $('scroll');
 
   function apply(fit){
     const vis = visible(); lastVis = vis;
-    cluster.clearLayers();
-    cluster.addLayers(vis.map(l => mk[l.id]));
+    cluster.clearLayers(); plain.clearLayers();
+    if (epMode()) vis.forEach(l => plain.addLayer(mk[l.id]));
+    else cluster.addLayers(vis.map(l => mk[l.id]));
+    lblClass();
     $('sCount').textContent = vis.length;
     $('sEps').textContent = new Set(vis.flatMap(l => l.epizody.filter(k => { const s = selS.value, d = selD.value; return d ? k === d : (!s || ep[k]?.serie == s); }))).size;
     $('sStand').textContent = vis.filter(l => l._s === 'stoji').length;
@@ -474,6 +511,7 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     if (fit && vis.length) fitTo(vis);
     if (current && !vis.some(l => l.id === current)) current = null;
     if (!current) list(vis);
+    sync();
   }
   function fitTo(vis){
     const core = vis.filter(l => map.distance([l.lat, l.lng], [51.51, -0.30]) < 50000);
@@ -491,21 +529,90 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     if (!marks.length) return h; marks.sort((a, b) => a[0] - b[0]);
     let out = '', p = 0; const raw = String(s); marks.forEach(([a, b]) => { if (a < p) return; out += esc(raw.slice(p, a)) + '<mark>' + esc(raw.slice(a, b)) + '</mark>'; p = b; });
     return out + esc(raw.slice(p)); };
+  // aktivní omezení výběru; každé jde vypnout jedním klikem
+  function fchips(){
+    const c = [], d = selD.value, s = selS.value;
+    const grp = (g, MAP, name) => { const k = Object.keys(MAP), off = k.filter(x => !on[g][x]); if (!off.length || off.length === k.length) return;
+      const onl = k.filter(x => on[g][x]);
+      c.push([g, name + ': ' + (onl.length <= off.length ? 'jen ' + onl.map(x => MAP[x].label).join(', ') : 'bez ' + off.map(x => MAP[x].label).join(', '))]); };
+    if (s && !d) c.push(['serie', s + '. série']);
+    grp('stav', STAV, 'Stav'); grp('jist', JIST, 'Jistota');
+    if (on.tip) c.push(['tip', 'Jen výběr pro Londýn']);
+    if (on.hq) c.push(['hq', 'Jen základny CI5']);
+    if (on.rep) c.push(['rep', 'Jen místa ze 3+ dílů']);
+    if (!c.length) return '';
+    return `<div class="fchips"><span class="lab">${c.length > 1 ? 'Platí zároveň' : 'Filtr'}</span>${c.map(([k, t]) =>
+      `<button class="fchip" data-off="${k}" title="Zrušit filtr">${esc(t)}<span class="x">×</span></button>`).join('')}</div>`;
+  }
+  function epsug(){
+    const m = epMatch(); if (!m.length) return '';
+    return `<div class="fchips"><span class="lab">Přejít na díl</span>${m.slice(0, 5).map(e =>
+      `<button class="fchip go" data-ep="${e.kod}" data-q=""><span class="ep">${e.kod}</span>${hl(e.nazev)}</button>`).join('')}${m.length > 5 ? `<span class="lab">+${m.length - 5}</span>` : ''}</div>`;
+  }
+  function offFilter(k){
+    if (k === 'serie') { selS.value = ''; selS.onchange(); return; }
+    if (k === 'stav' || k === 'jist') Object.keys(on[k]).forEach(x => on[k][x] = 1); else on[k] = 0;
+    lblClass(); apply(k === 'tip' || k === 'hq');
+  }
+  // proč místo odpovídá hledání – jen údaje, které v řádku nejsou vidět (název, obec a kód zvýrazňuje řádek sám)
+  function snip(txt){
+    const n = norm(txt), hits = terms().map(t => [n.indexOf(t), t.length]).filter(h => h[0] > -1).sort((x, y) => x[0] - y[0]);
+    if (!hits.length || txt.length <= 90) return hl(txt);
+    // úryvek pokryje všechna nalezená slova, pokud jsou blízko u sebe; jinak první z nich
+    const i = hits[0][0], end = Math.max(...hits.map(h => h[0] + h[1])), len = end - i <= 110 ? end - i : hits[0][1];
+    let a = Math.max(0, i - 30), b = Math.min(txt.length, i + len + 40);
+    if (a > 0) { const sp = txt.indexOf(' ', a); if (sp > -1 && sp < i) a = sp + 1; }
+    if (b < txt.length) { const sp = txt.lastIndexOf(' ', b); if (sp > i + len) b = sp; }
+    return (a > 0 ? '…' : '') + hl(txt.slice(a, b)) + (b < txt.length ? '…' : '');
+  }
+  function why(l){
+    const ts = terms(); if (!ts.length) return '';
+    const d = selD.value;
+    const shown = norm([l.nazev, l.obec, l.id, d && !on.tip ? l.sceny.find(x => x.epizoda === d)?.popis : '', on.tip ? l.pruvodce?.oblast : ''].join(' '));
+    let rest = ts.filter(t => !shown.includes(t));
+    if (!rest.length) return '';
+    const cand = [];
+    if (l.adresa) cand.push({lab:'Adresa', txt:l.adresa});
+    l.sceny.forEach(x => cand.push({lab:'Scéna ' + x.epizoda, txt:x.popis, snip:1}));
+    l.epizody.forEach(k => cand.push({lab:'Díl', txt:k + ' · ' + (ep[k]?.nazev || '')}));
+    if (l.pruvodce) cand.push({lab:'Výběr pro Londýn', txt:l.pruvodce.oblast + ' – ' + l.pruvodce.proc, snip:1});
+    const out = [];
+    while (rest.length && out.length < 2) {
+      let best = null, bn = 0;
+      cand.forEach(c => { if (out.includes(c)) return; const n = norm(c.txt), k = rest.filter(t => n.includes(t)).length; if (k > bn) { bn = k; best = c; } });
+      if (!best) break;
+      out.push(best); const n = norm(best.txt); rest = rest.filter(t => !n.includes(t));
+    }
+    // zbylá slova jen odkazem na údaj, bez dalšího úryvku
+    const more = [];
+    cand.forEach(c => { if (!rest.length || out.includes(c) || more.length >= 2) return; const n = norm(c.txt); if (rest.some(t => n.includes(t))) { more.push(c.lab); rest = rest.filter(t => !n.includes(t)); } });
+    return out.map((c, i) => `<div class="why"><em>${c.lab}</em>${c.snip ? snip(c.txt) : hl(c.txt)}${i === out.length - 1 && more.length ? ` <span class="more">· také: ${more.join(', ')}</span>` : ''}</div>`).join('');
+  }
   const dot = l => `<i class="d ${l._j === 'v' ? 'v' : ''} ${l._j === 'o' ? 'o' : ''}" style="--c:${STAV[l._s].c}"></i>`;
   function list(vis){
     const el = listEl();
-    const head = `<div class="sum"><span class="lab"><b>${vis.length}</b> míst${q.value.trim() ? ' odpovídá hledání' : ''}</span></div>`;
-    if (!vis.length) { el.innerHTML = `<div class="view">${head}<div class="empty">Žádná místa v aktuálním výběru.</div></div>`; return; }
-    const d = selD.value, s = selS.value, by = {};
+    const d = selD.value, s = selS.value, by = {}, e = ep[d];
+    const epc = e ? `<div class="epc">
+        <div class="lab"><span class="ep">${d}</span> · ${e.serie}. série, ${e.dil}. díl</div>
+        <h3>${esc(e.nazev)}</h3>
+        <div class="m2">${e.vysilano ? 'vysíláno ' + fmtDate(e.vysilano) : 'neodvysíláno'} · produkční kód ${esc(e.produkcni_kod)}${e.alt_nazvy ? ' · též ' + e.alt_nazvy.map(esc).join(', ') : ''}</div>
+        ${e.poznamka ? `<div class="m2">${esc(e.poznamka)}</div>` : ''}
+        <div class="epa">${ret ? `<button class="ret">← Spis ${ret.p}</button>` : ''}${epUrl[d] ? `<a href="${esc(epUrl[d])}" target="_blank" rel="noopener">↗ Díl na mark-1.co.uk</a>` : ''}</div>
+      </div>` : '';
+    const head = epc + fchips() + epsug() + `<div class="sum"><span class="lab"><b>${vis.length}</b> míst${q.value.trim() ? ' odpovídá hledání' : ''}</span></div>`;
+    if (!vis.length) { el.innerHTML = `<div class="view">${head}<div class="empty">Žádná místa v aktuálním výběru.</div></div>`; bindRet(el); return; }
     if (on.tip) vis.forEach(l => (by[l.pruvodce.oblast] ||= []).push(l));
     else vis.forEach(l => { const k = d || l.epizody.find(x => !s || ep[x]?.serie == s); (by[k] ||= []).push(l); });
     const keys = on.tip ? OBLASTI.filter(k => by[k]) : Object.keys(by).sort();
+    const sc = l => d && !on.tip ? l.sceny.find(x => x.epizoda === d) : null;
     el.innerHTML = `<div class="view">${head}` + keys.map(k => `
-      <div class="grp lab">${on.tip ? `<span><span class="ep">${esc(k)}</span></span>` : `<span><span class="ep">${k}</span> · ${esc(ep[k]?.nazev)}</span>`}<span>${by[k].length}</span></div>
-      ${by[k].map(l => `<div class="row" tabindex="0" data-id="${l.id}">${dot(l)}<div class="id">${l.id}</div>
-        <div><div class="n">${hl(l.nazev)}</div><div class="m2">${hl(l.obec)}${l.epizody.length > 1 ? ' · ' + l.epizody.length + ' dílů' : ''}${l._hq ? ' · základna CI5' : ''}${l._tip && !on.tip ? ' · výběr pro Londýn' : ''}</div></div></div>`).join('')}`).join('') + '</div>';
+      ${e && !on.tip ? '' : `<div class="grp lab">${on.tip ? `<span><span class="ep">${esc(k)}</span></span>` : `<span><span class="ep">${k}</span> · ${esc(ep[k]?.nazev)}</span>`}<span>${by[k].length}</span></div>`}
+      ${by[k].map(l => `<div class="row${ret && ret.p === l.id ? ' was' : ''}" tabindex="0" data-id="${l.id}">${dot(l)}<div class="id">${l.id}</div>
+        <div><div class="n">${hl(l.nazev)}</div><div class="m2">${hl(l.obec)}${l.epizody.length > 1 ? ' · ' + l.epizody.length + ' dílů' : ''}${l._hq ? ' · základna CI5' : ''}${l._tip && !on.tip ? ' · výběr pro Londýn' : ''}</div>${sc(l) ? `<div class="m3">${hl(sc(l).popis)}</div>` : ''}${why(l)}</div></div>`).join('')}`).join('') + '</div>';
     el.scrollTop = 0;
+    bindRet(el);
   }
+  const bindRet = el => { const b = el.querySelector('.ret'); if (b) b.onclick = backToPlace; };
 
   function mark(id){
     document.querySelectorAll('.m.sel').forEach(e => e.classList.remove('sel'));
@@ -516,18 +623,28 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
   let saved = null; // stav seznamu a mapy před otevřením spisu
   function show(id, pan){
     const l = lok.find(x => x.id === id); if (!l) return;
-    if (current === null) saved = {scroll:listEl().scrollTop, center:map.getCenter(), zoom:map.getZoom(), id};
+    if (current === null && !restoring) saved = {scroll:listEl().scrollTop, center:map.getCenter(), zoom:map.getZoom(), id};
     current = id;
     const m = mk[id];
-    if (pan && cluster.hasLayer(m)) cluster.zoomToShowLayer(m, () => {
+    const focus = () => {
       map.setView([l.lat, l.lng], Math.max(map.getZoom(), 16), {animate:false});
       if (mobile()) map.panBy([0, innerHeight * .22], {animate:false});
       mark(id);
-    });
+    };
+    if (pan && cluster.hasLayer(m)) cluster.zoomToShowLayer(m, focus);
+    else if (pan) focus();
     else mark(id);
     const first = l.epizody.map(k => ep[k]).filter(e => e?.vysilano).sort((a, b) => a.vysilano.localeCompare(b.vysilano))[0];
     const perS = [1, 2, 3, 4, 5].map(s => l.epizody.filter(k => ep[k]?.serie === s).length);
     const st = STAV[l._s];
+    const d = selD.value;
+    // scéna vybraného dílu první a zvýrazněná, ostatní v původním pořadí
+    const scs = [...l.sceny.filter(x => x.epizoda === d), ...l.sceny.filter(x => x.epizoda !== d)];
+    const scHTML = (d && l.epizody.includes(d) && !l.sceny.some(x => x.epizoda === d)
+        ? `<div class="sc cur none"><span class="e">${d}</span><div class="note">K vybranému dílu není u tohoto místa popis scény.</div></div>` : '') +
+      scs.map(x => `
+        <div class="sc${x.epizoda === d ? ' cur' : ''}"><button class="e" data-ep="${x.epizoda}" title="Místa dílu ${x.epizoda}">${x.epizoda}<small>${fmtDate(ep[x.epizoda]?.vysilano)}</small></button>
+        <div><div class="t">${esc(ep[x.epizoda]?.nazev)}${x.epizoda === d ? '<span class="cur-tag"> · vybraný díl</span>' : ''}</div>${esc(x.popis)}</div></div>`).join('');
     const el = listEl();
     el.innerHTML = `<div class="view">
       <div class="hd">
@@ -548,36 +665,123 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
         <div><span class="lab">Poprvé</span><b>${first ? fmtDate(first.vysilano) : '—'}</b></div>
         <div><span class="lab">Série</span><div class="ser">${perS.map((n, i) => `<i class="${n ? 'on' : ''}" title="${i + 1}. série: ${n}"><span>${i + 1}</span></i>`).join('')}</div></div>
       </div>
-      <div class="sec"><h3 class="lab">Scény</h3>${l.sceny.map(s => `
-        <div class="sc"><div class="e">${s.epizoda}<small>${fmtDate(ep[s.epizoda]?.vysilano)}</small></div>
-        <div><div class="t">${esc(ep[s.epizoda]?.nazev)}</div>${esc(s.popis)}</div></div>`).join('')}</div>
+      <div class="sec"><h3 class="lab">Scény</h3>${scHTML}</div>
       ${l.stav_poznamka ? `<div class="sec"><h3 class="lab">Dnes</h3><div class="note">${esc(l.stav_poznamka)}</div></div>` : ''}
       ${l.poznamka ? `<div class="sec"><h3 class="lab">Poznámka ke zdrojům</h3><div class="note">${esc(l.poznamka)}</div></div>` : ''}
       <div class="sec src"><h3 class="lab">Zdroje</h3>${l.zdroje.map(z => `<a href="${esc(z.url)}" target="_blank" rel="noopener">↗ ${esc(z.nazev)}</a>`).join('')}</div>
     </div>`;
     el.scrollTop = 0;
     $('back').onclick = close;
-    if (mobile()) { setTab('list'); if (sheet.dataset.state === 'peek') sheet.dataset.state = 'half'; }
+    if (mobile()) { const moving = sheet.dataset.state === 'peek'; setTab('list'); if (moving) sheet.dataset.state = 'half'; if (d) revealCur(el, id, moving); }
+    sync();
   }
-  function close(){
-    current = null; mark(null); list(lastVis);
-    if (!saved) return;
-    const el = listEl(), s = saved; saved = null;
+  // mobil: posunout obsah lišty jen o tolik, aby byla vidět scéna vybraného dílu (hlavička zůstává hned nad ní)
+  let revealTok = 0;
+  function revealCur(el, id, moving){
+    const tok = ++revealTok; let user = false;
+    const stop = () => { user = true; };
+    el.addEventListener('pointerdown', stop, {once:true, passive:true});
+    el.addEventListener('wheel', stop, {once:true, passive:true});
+    const run = () => {
+      if (tok !== revealTok || user || current !== id || !mobile() || sheet.classList.contains('drag')) return;
+      const c = el.querySelector('.sc.cur'); if (!c) return;
+      const er = el.getBoundingClientRect(), cr = c.getBoundingClientRect();
+      const top = cr.top - er.top + el.scrollTop;
+      let t = top + cr.height - el.clientHeight + 16;   // spodní okraj scény těsně nad spodkem lišty
+      if (t > top - 8) t = top - 8;                       // scéna vyšší než lišta: zarovnat začátek
+      if (t > el.scrollTop + 1) el.scrollTo({top:t, behavior:'smooth'});
+    };
+    if (!moving) requestAnimationFrame(() => requestAnimationFrame(run)); // po vykreslení (lišta se nehýbe)
+    const onEnd = e => { if (e.target === sheet && e.propertyName === 'height') { sheet.removeEventListener('transitionend', onEnd); run(); } };
+    sheet.addEventListener('transitionend', onEnd);                   // po změně výšky lišty
+    setTimeout(() => { sheet.removeEventListener('transitionend', onEnd); run(); }, 450); // pojistka
+  }
+  // návrat ze spisu do seznamu: pozice seznamu, výřez mapy, zvýraznění řádku
+  function applyBase(s){
+    if (!s) return;
+    const el = listEl();
     el.scrollTop = s.scroll;
+    el.querySelectorAll('.row.was').forEach(r => r.classList.remove('was'));
     const row = el.querySelector(`.row[data-id="${s.id}"]`);
     if (row) { row.classList.add('was'); const r = row.getBoundingClientRect(), b = el.getBoundingClientRect(); if (r.top < b.top || r.bottom > b.bottom) row.scrollIntoView({block:'nearest'}); }
-    if (!map.getCenter().equals(s.center) || map.getZoom() !== s.zoom) map.setView(s.center, s.zoom, {animate:true});
+    const c = L.latLng(s.center);
+    if (!map.getCenter().equals(c) || map.getZoom() !== s.zoom) map.setView(c, s.zoom, {animate:true});
+  }
+  function close(){
+    const target = {s:selS.value, d:selD.value, p:null};
+    if (hs?.prev && key(hs.prev) === key(target)) { history.back(); return; } // krok zpět v historii, ne nový záznam
+    const b = saved; saved = null;
+    current = null; mark(null); list(lastVis); applyBase(b); sync();
   }
 
-  const onRow = e => { const r = e.target.closest('.row'); if (r) show(r.dataset.id, true); };
+  // ── přechod místo → díl a zpět ──
+  function goEp(k){
+    if (!ep[k]) return;
+    if (k === selD.value) { if (current) close(); return; }
+    ret = current ? {s:selS.value, d:selD.value, p:current, base:saved} : null;
+    selS.value = String(ep[k].serie); fillDil(); selD.value = k;
+    current = null; saved = null; mark(null); apply(true);
+    if (ret) mark(ret.p);
+  }
+  function backToPlace(){
+    if (!ret) return;
+    if (hs?.prev && key(hs.prev) === key(ret)) { history.back(); return; }
+    restore({s:ret.s, d:ret.d, p:ret.p, base:ret.base, ret:null}); sync();
+  }
+
+  // ── stav v URL: #L-142, #S03E05, #S03E05/L-142 ──
+  let hs = null, restoring = false; // hs = stav aktuálního záznamu historie
+  const key = st => `${st.s}|${st.d}|${st.p || ''}`;
+  const hashOf = st => [st.d, st.p].filter(Boolean).join('/');
+  const urlOf = st => location.pathname + location.search + (hashOf(st) ? '#' + hashOf(st) : '');
+  function parseHash(){
+    const m = /^#(?:(S\d\dE\d\d))?\/?(?:(L-\d+))?$/i.exec(decodeURIComponent(location.hash));
+    if (!m || (!m[1] && !m[2])) return null;
+    const d = m[1]?.toUpperCase(), p = m[2]?.toUpperCase();
+    if (d && !ep[d]) return null;
+    if (p && !lok.some(l => l.id === p)) return null;
+    return {s:d ? String(ep[d].serie) : '', d:d || '', p:p || null, base:null, ret:null};
+  }
+  function sync(){
+    if (restoring || !hs) return;
+    const st = {s:selS.value, d:selD.value, p:current};
+    if (key(hs) === key(st)) return;
+    const ns = {...st, base:current ? saved : null, ret, prev:{s:hs.s, d:hs.d, p:hs.p}};
+    history.pushState(ns, '', urlOf(ns)); hs = ns;
+  }
+  function restore(st){
+    restoring = true;
+    const old = hs, filt = st.s !== selS.value || st.d !== selD.value;
+    ret = st.ret || null;
+    if (filt) { selS.value = st.s; fillDil(); selD.value = st.d; current = null; mark(null); apply(!st.p); }
+    if (st.p) { saved = st.base || null; if (st.p !== current) show(st.p, true); }
+    else if (current || filt) {
+      current = null; saved = null; mark(null); list(lastVis);
+      if (!filt && old?.p) applyBase(old.base);
+      else if (ret) mark(ret.p);
+    }
+    restoring = false;
+  }
+  addEventListener('popstate', e => {
+    const st = e.state || parseHash() || {s:'', d:'', p:null, base:null, ret:null};
+    restore(st);
+    hs = st.prev !== undefined ? st : {...st, prev:null};
+    if (!e.state) history.replaceState(hs, '', hashOf(st) ? urlOf(st) : location.href);
+  });
+
+  const onRow = e => {
+    const f = e.target.closest('[data-off]'); if (f) { offFilter(f.dataset.off); return; }
+    const b = e.target.closest('[data-ep]'); if (b) { if (b.dataset.q !== undefined) q.value = ''; goEp(b.dataset.ep); return; }
+    const r = e.target.closest('.row'); if (r) show(r.dataset.id, true);
+  };
   $('scroll').addEventListener('click', onRow);
   $('sList').addEventListener('click', onRow);
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && current) close();
     if (e.key === 'Enter' && e.target.classList?.contains('row')) show(e.target.dataset.id, true);
   });
-  selS.onchange = () => { fillDil(); current = null; saved = null; mark(null); apply(true); };
-  selD.onchange = () => { current = null; saved = null; mark(null); apply(true); };
+  selS.onchange = () => { fillDil(); current = null; saved = null; ret = null; mark(null); apply(true); };
+  selD.onchange = () => { current = null; saved = null; ret = null; mark(null); apply(true); };
   let qt;
   q.addEventListener('input', () => {
     $('searchbox').classList.toggle('has', !!q.value);
@@ -641,8 +845,15 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
   mq.addEventListener('change', placeUI);
 
   fillDil();
+  const h0 = parseHash();
+  restoring = true;
+  if (h0?.d) { selS.value = h0.s; fillDil(); selD.value = h0.d; }
   placeUI();
   fitTo(lastVis);
+  if (h0?.p) show(h0.p, true);
+  restoring = false;
+  hs = {s:selS.value, d:selD.value, p:current, base:null, ret:null, prev:null};
+  history.replaceState(hs, '', h0 ? urlOf(hs) : location.href);
 })();
 </script>
 </body>
