@@ -177,6 +177,7 @@ select option{background:var(--glass-solid);color:var(--tx)}
 .row{display:grid;grid-template-columns:14px 52px 1fr;gap:12px;align-items:start;padding:11px 20px;border-bottom:1px solid var(--line);cursor:pointer;transition:background-color .15s}
 .row:hover{background:var(--glass-hi)}
 .row:hover .n{color:var(--amb-tx)}
+.row.was{background:var(--amb-soft)}
 .row .d{width:9px;height:9px;margin-top:6px;border:2px solid var(--c);border-radius:2px}
 .row .d.v{background:var(--c)}
 .row .d.o{border-style:dashed;border-radius:50%;border-width:1.5px;width:11px;height:11px}
@@ -222,30 +223,44 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
 #sheet{display:none}
 @media (max-width:1180px){:root{--lw:220px;--pw:370px}.stats{display:none}}
 @media (max-width:860px){
-  :root{--gap:10px;--top:auto;--peek:132px}
+  :root{--gap:10px;--top:auto;--sab:env(safe-area-inset-bottom,0px);--peek:calc(152px + var(--sab));--half:52vh;--full:88vh}
+  @supports (height:1dvh){:root{--half:52dvh;--full:88dvh}}
   #bar{height:auto;flex-wrap:wrap;gap:10px;padding:10px 10px 10px 12px}
   .brand{flex:1}
   .vr,.stats{display:none}
   #searchbox{order:3;flex:1 0 100%;max-width:none}
   #layers,#panel,#coords{display:none}
-  .leaflet-top.leaflet-left{top:118px;left:var(--gap)}
-  .leaflet-bottom.leaflet-right{right:0;bottom:calc(var(--peek) - 14px)}
-  #sheet{display:flex;flex-direction:column;position:fixed;z-index:1000;left:0;right:0;bottom:0;height:88vh;border-radius:18px 18px 0 0;border-bottom:0;
-    transform:translateY(calc(88vh - var(--peek)));transition:transform .32s var(--ease),background-color .35s;touch-action:none}
-  #sheet[data-state="half"]{transform:translateY(calc(88vh - 52vh))}
-  #sheet[data-state="full"]{transform:translateY(0)}
+  .leaflet-top.leaflet-left{top:124px;left:var(--gap)}
+  .leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important;font-size:20px!important}
+  /* atribuce a měřítko nad sbalenou lištou, na plném podkladu */
+  .leaflet-bottom.leaflet-right{right:0;bottom:calc(var(--peek) + 6px)}
+  .leaflet-control-attribution{background:var(--glass-solid)!important;border-radius:8px 0 0 8px;padding:2px 8px!important}
+  .leaflet-bottom.leaflet-right{transition:bottom .32s var(--ease),opacity .2s}
+  body:has(#sheet[data-state="half"]) .leaflet-bottom.leaflet-right{bottom:calc(var(--half) + 6px)}
+  /* plná lišta zakrývá mapu – atribuce se vrátí se sbalením */
+  body:has(#sheet[data-state="full"]) .leaflet-bottom.leaflet-right,body:has(#sheet.drag) .leaflet-bottom.leaflet-right{opacity:0;pointer-events:none}
+  #theme{width:66px;height:36px}
+  #theme .knob{width:28px;height:28px}
+  [data-theme="light"] #theme .knob{transform:translateX(30px)}
+  #theme svg{top:10px}#theme .moon{left:10px}#theme .sun{right:10px}
+  #theme::after{content:"";position:absolute;inset:-5px -2px}
+  #sheet{display:flex;flex-direction:column;position:fixed;z-index:1000;left:0;right:0;bottom:0;height:var(--peek);max-height:var(--full);
+    border-radius:18px 18px 0 0;border-bottom:0;padding-bottom:var(--sab);transition:height .32s var(--ease),background-color .35s}
+  #sheet[data-state="half"]{height:var(--half)}
+  #sheet[data-state="full"]{height:var(--full)}
   #sheet.drag{transition:none}
-  .handle{padding:10px 0 4px;cursor:grab;flex:none}
-  .handle i{display:block;width:40px;height:4px;border-radius:4px;background:var(--tx3);opacity:.5;margin:0 auto}
-  .tabs{display:flex;gap:6px;padding:6px 14px 10px;flex:none}
-  .tabs button{flex:1;font:600 12px var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:9px;border-radius:9px;color:var(--tx2);border:1px solid var(--border);transition:background-color .2s,color .2s}
+  .shead{flex:none;touch-action:none;cursor:grab}
+  .handle{height:26px;display:flex;align-items:center;justify-content:center}
+  .handle i{display:block;width:44px;height:5px;border-radius:5px;background:var(--tx3);opacity:.55}
+  .tabs{display:flex;gap:8px;padding:2px 14px 10px}
+  .tabs button{flex:1;min-height:44px;font:600 12px var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:0 9px;border-radius:10px;color:var(--tx2);border:1px solid var(--border);transition:background-color .2s,color .2s}
   .tabs button.on{background:var(--amb);color:var(--on-amb);border-color:var(--amb)}
   .sbody{flex:1;min-height:0;overflow-y:auto;touch-action:pan-y}
   .sbody[hidden]{display:none}
   .sbody .filters{flex-direction:column;align-items:stretch;padding:12px 18px 4px;gap:10px}
-  .sbody .filters label{justify-content:space-between}
-  .sbody .filters label .lab{width:44px;flex:none}
-  .sbody select{flex:1;max-width:none}
+  .sbody .filters label{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;gap:10px}
+  .sbody select,.sbody #dil{width:100%;max-width:none;min-height:44px}
+  .sbody .tog{min-height:44px;padding-top:8px;padding-bottom:8px}
   .grp{background:var(--glass-solid)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -283,8 +298,10 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
 <div id="coords" class="glass">– –</div>
 
 <section id="sheet" class="glass" data-state="peek">
-  <div class="handle" id="handle"><i></i></div>
-  <div class="tabs"><button class="on" data-tab="list">Místa</button><button data-tab="layers">Filtry a vrstvy</button></div>
+  <div class="shead" id="shead">
+    <div class="handle" id="handle"><i></i></div>
+    <div class="tabs"><button class="on" data-tab="list">Místa</button><button data-tab="layers">Filtry a vrstvy</button></div>
+  </div>
   <div class="sbody" id="sList"></div>
   <div class="sbody" id="sLayers" hidden></div>
 </section>
@@ -496,8 +513,10 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     m.getElement()?.querySelector('.m')?.classList.add('sel');
   }
 
+  let saved = null; // stav seznamu a mapy před otevřením spisu
   function show(id, pan){
     const l = lok.find(x => x.id === id); if (!l) return;
+    if (current === null) saved = {scroll:listEl().scrollTop, center:map.getCenter(), zoom:map.getZoom(), id};
     current = id;
     const m = mk[id];
     if (pan && cluster.hasLayer(m)) cluster.zoomToShowLayer(m, () => {
@@ -540,7 +559,15 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     $('back').onclick = close;
     if (mobile()) { setTab('list'); if (sheet.dataset.state === 'peek') sheet.dataset.state = 'half'; }
   }
-  function close(){ current = null; mark(null); list(lastVis); }
+  function close(){
+    current = null; mark(null); list(lastVis);
+    if (!saved) return;
+    const el = listEl(), s = saved; saved = null;
+    el.scrollTop = s.scroll;
+    const row = el.querySelector(`.row[data-id="${s.id}"]`);
+    if (row) { row.classList.add('was'); const r = row.getBoundingClientRect(), b = el.getBoundingClientRect(); if (r.top < b.top || r.bottom > b.bottom) row.scrollIntoView({block:'nearest'}); }
+    if (!map.getCenter().equals(s.center) || map.getZoom() !== s.zoom) map.setView(s.center, s.zoom, {animate:true});
+  }
 
   const onRow = e => { const r = e.target.closest('.row'); if (r) show(r.dataset.id, true); };
   $('scroll').addEventListener('click', onRow);
@@ -549,12 +576,12 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     if (e.key === 'Escape' && current) close();
     if (e.key === 'Enter' && e.target.classList?.contains('row')) show(e.target.dataset.id, true);
   });
-  selS.onchange = () => { fillDil(); current = null; mark(null); apply(true); };
-  selD.onchange = () => { current = null; mark(null); apply(true); };
+  selS.onchange = () => { fillDil(); current = null; saved = null; mark(null); apply(true); };
+  selD.onchange = () => { current = null; saved = null; mark(null); apply(true); };
   let qt;
   q.addEventListener('input', () => {
     $('searchbox').classList.toggle('has', !!q.value);
-    clearTimeout(qt); qt = setTimeout(() => { current = null; mark(null); apply(false); if (mobile() && q.value && sheet.dataset.state === 'peek') sheet.dataset.state = 'half'; }, 90);
+    clearTimeout(qt); qt = setTimeout(() => { current = null; saved = null; mark(null); apply(false); if (mobile() && q.value && sheet.dataset.state === 'peek') sheet.dataset.state = 'half'; }, 90);
   });
   q.addEventListener('keydown', e => { if (e.key === 'Enter' && lastVis.length) { fitTo(lastVis); if (lastVis.length === 1) show(lastVis[0].id, true); } });
   $('qx').onclick = () => { q.value = ''; q.dispatchEvent(new Event('input')); q.focus(); };
@@ -570,23 +597,37 @@ mark{background:var(--amb-soft);color:inherit;border-radius:3px;padding:0 1px}
     setTab(b.dataset.tab); if (sheet.dataset.state === 'peek') sheet.dataset.state = 'half';
   });
   $('sLayers').addEventListener('click', onTog);
+  // tažení za celé záhlaví (úchyt + záložky); ťuknutí na úchyt přepíná polohy, ťuknutí na záložku zůstává klikem
   const states = ['peek', 'half', 'full'];
-  let y0 = null, t0 = 0, moved = false;
-  const handle = $('handle');
-  handle.addEventListener('pointerdown', e => { y0 = e.clientY; moved = false; t0 = sheet.getBoundingClientRect().top; sheet.classList.add('drag'); handle.setPointerCapture(e.pointerId); });
-  handle.addEventListener('pointermove', e => {
-    if (y0 === null) return; const dy = e.clientY - y0; if (Math.abs(dy) > 4) moved = true;
-    const vh = innerHeight, top = Math.min(Math.max(t0 + dy, vh * .12), vh - 132);
-    sheet.style.transform = `translateY(${top - vh * .12}px)`;
+  const shead = $('shead');
+  let drag = null, swallowClick = false;
+  shead.addEventListener('pointerdown', e => {
+    drag = {y:e.clientY, h:sheet.getBoundingClientRect().height, id:e.pointerId, moved:false, onHandle:!!e.target.closest('.handle')};
   });
-  handle.addEventListener('pointerup', e => {
-    if (y0 === null) return; sheet.classList.remove('drag'); sheet.style.transform = '';
-    const i = states.indexOf(sheet.dataset.state);
-    if (!moved) sheet.dataset.state = states[(i + 1) % 3];
-    else { const top = t0 + (e.clientY - y0), vh = innerHeight;
-      sheet.dataset.state = top < vh * .3 ? 'full' : top < vh * .7 ? 'half' : 'peek'; }
-    y0 = null;
+  shead.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dy = e.clientY - drag.y;
+    if (!drag.moved && Math.abs(dy) > 6) { drag.moved = true; sheet.classList.add('drag'); try { shead.setPointerCapture(drag.id); } catch (_) {} }
+    if (drag.moved) {
+      const min = shead.offsetHeight, max = innerHeight * .88;
+      sheet.style.height = Math.min(Math.max(drag.h - dy, min), max) + 'px';
+    }
   });
+  const endDrag = () => {
+    if (!drag) return;
+    if (drag.moved) {
+      const h = sheet.getBoundingClientRect().height, vh = innerHeight;
+      sheet.classList.remove('drag'); sheet.style.height = '';
+      sheet.dataset.state = h > vh * .7 ? 'full' : h > vh * .3 ? 'half' : 'peek';
+      swallowClick = true; setTimeout(() => swallowClick = false, 0);
+    } else if (drag.onHandle) {
+      sheet.dataset.state = states[(states.indexOf(sheet.dataset.state) + 1) % 3];
+    }
+    drag = null;
+  };
+  shead.addEventListener('pointerup', endDrag);
+  shead.addEventListener('pointercancel', endDrag);
+  shead.addEventListener('click', e => { if (swallowClick) { e.stopPropagation(); e.preventDefault(); } }, true);
 
   // přesun ovládacích prvků mezi desktopem a mobilem
   function placeUI(){
